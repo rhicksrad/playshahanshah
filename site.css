@@ -117,3 +117,21 @@ nav.top .links a.cta { color: var(--bg); background: var(--gold); padding: 6px 1
 
 footer { border-top: 1px solid var(--line); margin-top: 50px; padding: 30px 24px 40px; text-align: center; color: var(--dim); font-size: 16px; }
 footer p { max-width: 860px; margin: 6px auto; } footer .small { font-size: 14px; }
+
+/* Farsi (fa/): right to left, Vazirmatn */
+html[lang="fa"] body, html[lang="fa"] h1, html[lang="fa"] h2, html[lang="fa"] h3, html[lang="fa"] .brand,
+html[lang="fa"] nav.top .links, html[lang="fa"] .button, html[lang="fa"] .kicker, html[lang="fa"] .tag,
+html[lang="fa"] .tabs, html[lang="fa"] .levels span, html[lang="fa"] .inplay span, html[lang="fa"] #q { font-family: 'Vazirmatn', Tahoma, sans-serif; }
+html[lang="fa"] body { font-size: 18px; line-height: 1.9; }
+html[lang="fa"] .caption, html[lang="fa"] .subtitle, html[lang="fa"] .map figcaption { font-style: normal; }
+html[lang="fa"] .kicker, html[lang="fa"] .levels span, html[lang="fa"] .inplay span, html[lang="fa"] .tag { letter-spacing: 0; text-transform: none; }
+html[dir="rtl"] .timeline { border-left: 0; border-right: 2px solid var(--gold-dim); padding-left: 0; padding-right: 18px; }
+html[dir="rtl"] .timeline b { margin-right: 0; margin-left: 8px; }
+html[dir="rtl"] .inplay.big { border-left: 0; border-right: 2px solid var(--gold-dim); padding-left: 0; padding-right: 14px; }
+html[dir="rtl"] .play { border-left: 1px solid var(--line); border-right: 3px solid var(--gold); }
+html[dir="rtl"] .sec h2 { margin-right: 0; margin-left: 10px; }
+html[dir="rtl"] .related ul { padding-left: 0; padding-right: 22px; }
+html[dir="rtl"] nav.top .links { margin-left: 0; margin-right: auto; }
+.sources[dir="ltr"] h2 { text-align: right; }
+html[lang="en"] .sources[dir="ltr"] h2 { text-align: left; }
+nav.top .links a.lang { color: var(--gold); }
