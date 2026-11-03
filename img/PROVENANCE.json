@@ -645,6 +645,13 @@
    "date": "2026-10-30T00:43:26+00:00",
    "source_sha256": "649e38b7ab4ffd4c3c664c322917de1438386f72e526fe844e9c8286ae338c29"
   },
+  "img/decorations/darius_statue.webp": {
+   "game_file": "assets/generated/illustrations/decorations/darius_statue.jpg",
+   "source": "PharaohArt/decor/darius_statue_t1.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-03T00:20:37+00:00",
+   "source_sha256": "c50b3ff88d4acc276788636b0cbffac8cc123036f9c17fb5785887e65c3aefd4"
+  },
   "img/decorations/fire_altar.webp": {
    "game_file": "assets/generated/illustrations/decorations/fire_altar.jpg",
    "source": "PharaohArt/decor/fire_altar_t1.png (off-repo Codex archive)",
@@ -1337,6 +1344,13 @@
    "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
    "date": "2026-10-29T03:39:22+00:00",
    "source_sha256": "072163471509581ceb58fa958f244a9bfc90bef8ec660d53c54c261790b5d96d"
+  },
+  "img/icons/buildings/builders_yard.webp": {
+   "game_file": "assets/generated/icons/buildings/builders_yard.png",
+   "source": "PharaohArt/icons_buildings/bld_builders_yard_t1.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-02T21:03:49+00:00",
+   "source_sha256": "d34b590ba3be30c325921e5abdb10b4311ecfb74a1d1ab47b35210d828d6f441"
   },
   "img/icons/buildings/kings_eye.webp": {
    "game_file": "assets/generated/icons/buildings/kings_eye.png",
@@ -4336,10 +4350,10 @@
   },
   "img/topics/buildings/b_herm_s0.webp": {
    "game_file": "assets/generated/illustrations/topics/buildings/b_herm_s0.jpg",
-   "source": "PharaohArt/topics/buildings/b_herm_s0_t6.png (off-repo Codex archive)",
+   "source": "PharaohArt/topics/buildings/b_herm_s0_t7.png (off-repo Codex archive)",
    "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
-   "date": "2026-11-02T20:40:59+00:00",
-   "source_sha256": "47fb840a70e9d3978fa6e270c7d2d6615a7a38bf5e961650ae973829e09d0d29"
+   "date": "2026-11-02T20:40:58+00:00",
+   "source_sha256": "5d871bf604b141aa981296ba320269895dddb40927dee7952fb0641cbd98a67e"
   },
   "img/topics/buildings/b_herm_s1.webp": {
    "game_file": "assets/generated/illustrations/topics/buildings/b_herm_s1.jpg",
@@ -5691,6 +5705,34 @@
    "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
    "date": "2026-11-02T19:44:14+00:00",
    "source_sha256": "4950fcfa1051d886c3bddd1ed2e53d5f47f37b4ca89c26dafb3704ae28267193"
+  },
+  "img/topics/buildings/b_scout_post_s0.webp": {
+   "game_file": "assets/generated/illustrations/topics/buildings/b_scout_post_s0.jpg",
+   "source": "PharaohArt/topics/buildings/b_scout_post_s0_t1.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-02T21:34:51+00:00",
+   "source_sha256": "eb0f5390a4e4a5561ef4ea42f0ab671c0f6da174f17bed70378d63321e064924"
+  },
+  "img/topics/buildings/b_scout_post_s1.webp": {
+   "game_file": "assets/generated/illustrations/topics/buildings/b_scout_post_s1.jpg",
+   "source": "PharaohArt/topics/buildings/b_scout_post_s1_t1.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-02T21:34:51+00:00",
+   "source_sha256": "e91ea15c7a2ce2b6aca36a21c0417b1ffe6e039e1d4cc9ec8a0c35d6d7831103"
+  },
+  "img/topics/buildings/b_scout_post_s2.webp": {
+   "game_file": "assets/generated/illustrations/topics/buildings/b_scout_post_s2.jpg",
+   "source": "PharaohArt/topics/buildings/b_scout_post_s2_t1.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-02T21:36:41+00:00",
+   "source_sha256": "62cea38c13f6dfaeb1be6e8b61a7cb340022eac70134fe467682632e77788e1a"
+  },
+  "img/topics/buildings/b_scout_post_s3.webp": {
+   "game_file": "assets/generated/illustrations/topics/buildings/b_scout_post_s3.jpg",
+   "source": "PharaohArt/topics/buildings/b_scout_post_s3_t1.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-02T21:34:51+00:00",
+   "source_sha256": "d924c966293e5d8be49f2885c4ed1506a7bc59db4f230b10729731604d7f4340"
   },
   "img/topics/buildings/b_scribe_s0.webp": {
    "game_file": "assets/generated/illustrations/topics/buildings/b_scribe_s0.jpg",
@@ -20650,6 +20692,34 @@
    "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
    "date": "2026-11-02T16:29:30+00:00",
    "source_sha256": "b680b3b1c5220b01a232b4f3c563dd31749be930977fd5e576d7c975d46eba75"
+  },
+  "img/topics/units/u_scout_s0.webp": {
+   "game_file": "assets/generated/illustrations/topics/units/u_scout_s0.jpg",
+   "source": "PharaohArt/topics/units/u_scout_s0_t1.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-02T21:36:39+00:00",
+   "source_sha256": "5f9ffa73935debb8ebffa1ef94512212ea124e20afd934fe297362f149497f76"
+  },
+  "img/topics/units/u_scout_s1.webp": {
+   "game_file": "assets/generated/illustrations/topics/units/u_scout_s1.jpg",
+   "source": "PharaohArt/topics/units/u_scout_s1_t1.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-02T21:36:39+00:00",
+   "source_sha256": "43d4cb7137cc0b2e5a53e2690c235ffe45061eeb06b4c7d6c4e32e8de97f196b"
+  },
+  "img/topics/units/u_scout_s2.webp": {
+   "game_file": "assets/generated/illustrations/topics/units/u_scout_s2.jpg",
+   "source": "PharaohArt/topics/units/u_scout_s2_t1.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-02T21:36:23+00:00",
+   "source_sha256": "80d83780ee7b595038d13d7bafd14b4dcfb4befaee44aeae29954ca7646d1614"
+  },
+  "img/topics/units/u_scout_s3.webp": {
+   "game_file": "assets/generated/illustrations/topics/units/u_scout_s3.jpg",
+   "source": "PharaohArt/topics/units/u_scout_s3_t1.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-02T21:38:06+00:00",
+   "source_sha256": "c9994cf3b41b6af2997ff23d951c4b242c4ac93bc1d4dab8edb2d53e758f3f8e"
   },
   "img/topics/units/u_scythian_s0.webp": {
    "game_file": "assets/generated/illustrations/topics/units/u_scythian_s0.jpg",

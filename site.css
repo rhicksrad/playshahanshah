@@ -118,13 +118,13 @@ nav.top .links a.cta { color: var(--bg); background: var(--gold); padding: 6px 1
 footer { border-top: 1px solid var(--line); margin-top: 50px; padding: 30px 24px 40px; text-align: center; color: var(--dim); font-size: 16px; }
 footer p { max-width: 860px; margin: 6px auto; } footer .small { font-size: 14px; }
 
-/* Farsi (fa/): right to left, Vazirmatn */
-html[lang="fa"] body, html[lang="fa"] h1, html[lang="fa"] h2, html[lang="fa"] h3, html[lang="fa"] .brand,
-html[lang="fa"] nav.top .links, html[lang="fa"] .button, html[lang="fa"] .kicker, html[lang="fa"] .tag,
-html[lang="fa"] .tabs, html[lang="fa"] .levels span, html[lang="fa"] .inplay span, html[lang="fa"] #q { font-family: 'Vazirmatn', Tahoma, sans-serif; }
-html[lang="fa"] body { font-size: 18px; line-height: 1.9; }
-html[lang="fa"] .caption, html[lang="fa"] .subtitle, html[lang="fa"] .map figcaption { font-style: normal; }
-html[lang="fa"] .kicker, html[lang="fa"] .levels span, html[lang="fa"] .inplay span, html[lang="fa"] .tag { letter-spacing: 0; text-transform: none; }
+/* Farsi (fa/) and Arabic (ar/): right to left, Vazirmatn */
+html[dir="rtl"] body, html[dir="rtl"] h1, html[dir="rtl"] h2, html[dir="rtl"] h3, html[dir="rtl"] .brand,
+html[dir="rtl"] nav.top .links, html[dir="rtl"] .button, html[dir="rtl"] .kicker, html[dir="rtl"] .tag,
+html[dir="rtl"] .tabs, html[dir="rtl"] .levels span, html[dir="rtl"] .inplay span, html[dir="rtl"] #q { font-family: 'Vazirmatn', Tahoma, sans-serif; }
+html[dir="rtl"] body { font-size: 18px; line-height: 1.9; }
+html[dir="rtl"] .caption, html[dir="rtl"] .subtitle, html[dir="rtl"] .map figcaption { font-style: normal; }
+html[dir="rtl"] .kicker, html[dir="rtl"] .levels span, html[dir="rtl"] .inplay span, html[dir="rtl"] .tag { letter-spacing: 0; text-transform: none; }
 html[dir="rtl"] .timeline { border-left: 0; border-right: 2px solid var(--gold-dim); padding-left: 0; padding-right: 18px; }
 html[dir="rtl"] .timeline b { margin-right: 0; margin-left: 8px; }
 html[dir="rtl"] .inplay.big { border-left: 0; border-right: 2px solid var(--gold-dim); padding-left: 0; padding-right: 14px; }
@@ -132,9 +132,51 @@ html[dir="rtl"] .play { border-left: 1px solid var(--line); border-right: 3px so
 html[dir="rtl"] .sec h2 { margin-right: 0; margin-left: 10px; }
 html[dir="rtl"] .related ul { padding-left: 0; padding-right: 22px; }
 html[dir="rtl"] nav.top .links { margin-left: 0; margin-right: auto; }
-.sources[dir="ltr"] h2 { text-align: right; }
-html[lang="en"] .sources[dir="ltr"] h2 { text-align: left; }
-nav.top .links a.lang { color: var(--gold); }
+html[dir="rtl"] .sources[dir="ltr"] h2 { text-align: right; }
 .hero .kicker, .home-hero .kicker { text-shadow: 0 1px 6px rgba(0,0,0,.95), 0 0 2px rgba(0,0,0,.9); }
 @media (max-width: 480px) { .home-hero h1 { font-size: 10vw; letter-spacing: .04em; } .shots { grid-template-columns: 1fr; } .button { padding: 10px 16px; } }
 body { overflow-wrap: anywhere; }
+
+/* Chinese, Japanese, Korean: the system's own font, no small caps or spacing */
+html[lang="zh-CN"] body, html[lang="ja"] body, html[lang="ko"] body, html[lang="zh-CN"] #q, html[lang="ja"] #q, html[lang="ko"] #q {
+  font-family: system-ui, 'Noto Sans CJK SC', 'Noto Sans JP', 'Noto Sans KR', 'Microsoft YaHei', 'Yu Gothic', 'Malgun Gothic', sans-serif; font-size: 17px; line-height: 1.8; }
+html[lang="zh-CN"] :is(h1, h2, h3, .button, .kicker, .tag, .tabs, nav.top .links, .levels span, .inplay span),
+html[lang="ja"] :is(h1, h2, h3, .button, .kicker, .tag, .tabs, nav.top .links, .levels span, .inplay span),
+html[lang="ko"] :is(h1, h2, h3, .button, .kicker, .tag, .tabs, nav.top .links, .levels span, .inplay span) { font-family: 'Cinzel', system-ui, sans-serif; letter-spacing: 0; text-transform: none; }
+html[lang="zh-CN"] :is(.caption, .subtitle, .source, .map figcaption), html[lang="ja"] :is(.caption, .subtitle, .source, .map figcaption),
+html[lang="ko"] :is(.caption, .subtitle, .source, .map figcaption) { font-style: normal; }
+
+/* Language menu */
+nav.top select.lang { font: inherit; color: var(--gold); background: var(--panel); border: 1px solid var(--gold-dim); border-radius: 3px;
+  padding: 4px 26px 4px 8px; cursor: pointer; appearance: none; letter-spacing: 0; text-transform: none;
+  background-image: linear-gradient(45deg, transparent 50%, var(--gold) 50%), linear-gradient(135deg, var(--gold) 50%, transparent 50%);
+  background-position: right 12px center, right 7px center; background-size: 5px 5px; background-repeat: no-repeat; }
+html[dir="rtl"] nav.top select.lang { padding: 4px 8px 4px 26px; background-position: left 7px center, left 12px center; }
+nav.top select.lang option { background: var(--panel); color: var(--cream); }
+
+/* The narrator */
+button.narr, button.narr-toggle { font-family: 'Cinzel', Georgia, serif; display: inline-flex; align-items: center; gap: 8px; cursor: pointer;
+  border-radius: 3px; letter-spacing: .06em; }
+button.narr { margin-top: 14px; font-size: 15px; font-weight: 700; color: var(--bg); background: var(--gold); border: 0; padding: 9px 18px 9px 14px; }
+button.narr:hover { background: #e2bb62; }
+button.narr svg { width: 15px; height: 15px; fill: currentColor; }
+button.narr .i-stop, button.narr.on .i-play { display: none; }
+button.narr.on .i-stop { display: block; }
+button.narr.on { background: var(--cream); }
+button.narr:disabled { opacity: .45; cursor: not-allowed; }
+button.narr:focus-visible, button.narr-toggle:focus-visible, nav.top select.lang:focus-visible { outline: 2px solid var(--cream); outline-offset: 2px; }
+button.narr-toggle { font-size: 13px; color: var(--dim); background: transparent; border: 1px solid var(--line); padding: 4px 10px; }
+button.narr-toggle:hover { color: var(--gold); border-color: var(--gold-dim); }
+button.narr-toggle svg { width: 16px; height: 16px; fill: currentColor; stroke: currentColor; stroke-width: 1.4; stroke-linecap: round; }
+button.narr-toggle svg path.w, button.narr-toggle svg path.x { fill: none; }
+button.narr-toggle svg .x, button.narr-toggle[aria-pressed="false"] svg .w { display: none; }
+button.narr-toggle[aria-pressed="false"] svg .x { display: inline; }
+html[dir="rtl"] button.narr, html[dir="rtl"] button.narr-toggle, html[lang="zh-CN"] button.narr, html[lang="ja"] button.narr, html[lang="ko"] button.narr,
+html[lang="zh-CN"] button.narr-toggle, html[lang="ja"] button.narr-toggle, html[lang="ko"] button.narr-toggle { letter-spacing: 0; }
+html[dir="rtl"] button.narr, html[dir="rtl"] button.narr-toggle { font-family: 'Vazirmatn', Tahoma, sans-serif; }
+html[dir="rtl"] button.narr { padding: 9px 14px 9px 18px; }
+.founding { background: var(--panel); border: 1px solid var(--line); border-left: 3px solid var(--gold-dim); padding: 16px 22px 18px; margin: 4px 0 26px; }
+.founding p:not(.kicker) { font-size: 21px; font-style: italic; margin-top: 4px; }
+html[dir="rtl"] .founding { border-left: 1px solid var(--line); border-right: 3px solid var(--gold-dim); }
+html[dir="rtl"] .founding p:not(.kicker), html[lang="zh-CN"] .founding p, html[lang="ja"] .founding p, html[lang="ko"] .founding p { font-style: normal; }
+button.narr[hidden], button.narr-toggle[hidden] { display: none; }
