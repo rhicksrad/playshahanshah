@@ -200,6 +200,10 @@
   "sound/shots/charge_yell5"
  ],
  "fx": {
+  "sea": {
+   "src": "sound/fx/sea",
+   "loop": true
+  },
   "rain": {
    "src": "sound/fx/rain",
    "loop": true
@@ -222,6 +226,26 @@
   },
   "thunder": {
    "src": "sound/fx/thunder",
+   "loop": false
+  },
+  "gulls": {
+   "src": "sound/fx/gulls",
+   "loop": false
+  },
+  "hooves": {
+   "src": "sound/fx/hooves",
+   "loop": false
+  },
+  "horse": {
+   "src": "sound/fx/horse",
+   "loop": false
+  },
+  "smithy": {
+   "src": "sound/fx/smithy",
+   "loop": false
+  },
+  "cheer": {
+   "src": "sound/fx/cheer",
    "loop": false
   },
   "camels": {
