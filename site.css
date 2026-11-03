@@ -214,3 +214,6 @@ button.autoplay[hidden] { display: none; }
 .ap-bar svg { width: 14px; height: 14px; fill: currentColor; }
 p.reading { background: rgba(214, 170, 82, .10); box-shadow: -6px 0 0 rgba(214, 170, 82, .10), 6px 0 0 rgba(214, 170, 82, .10); transition: background .4s; }
 @media (max-width: 560px) { .ap-bar span { display: none; } }
+/* Autoplay's slow pan and zoom (autoplay.js): the painting moves inside its frame */
+.sec figure, .hero, .topic-head .lead-art { overflow: hidden; }
+.sec figure { border-radius: 3px; }
