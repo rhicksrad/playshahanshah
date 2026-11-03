@@ -185,3 +185,14 @@ p.inplay button.narr.mini { vertical-align: -6px; }
 html[dir="rtl"] .founding { border-left: 1px solid var(--line); border-right: 3px solid var(--gold-dim); }
 html[dir="rtl"] .founding p:not(.kicker), html[lang="zh-CN"] .founding p, html[lang="ja"] .founding p, html[lang="ko"] .founding p { font-style: normal; }
 button.narr[hidden], button.narr-toggle[hidden] { display: none; }
+/* A painting full screen (lightbox.js) */
+img.zoomable { cursor: zoom-in; }
+.lightbox { position: fixed; inset: 0; z-index: 100; background: rgba(8, 6, 4, .97); display: flex; flex-direction: column;
+  align-items: center; justify-content: center; padding: 16px; cursor: zoom-out; }
+.lightbox[hidden] { display: none; }
+.lightbox img { max-width: 100%; max-height: calc(100vh - 80px); object-fit: contain; box-shadow: 0 8px 40px rgba(0, 0, 0, .6); }
+.lightbox .cap { color: var(--cream); margin: 12px 0 0; max-width: 900px; text-align: center; font-size: 15px; }
+.lightbox .x { position: absolute; top: 12px; right: 16px; background: transparent; border: 0; color: var(--cream);
+  font-size: 34px; line-height: 1; cursor: pointer; }
+html[dir="rtl"] .lightbox .x { right: auto; left: 16px; }
+html.lb-open { overflow: hidden; }
