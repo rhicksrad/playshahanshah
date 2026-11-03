@@ -7,6 +7,7 @@
 // is fetched into the page, so the screen stays full. Paintings cross-fade, the words fade, and a small timeline
 // beside them marks the years the article (or the paragraph, where it names one) is about.
 (() => {
+  const BASE = new URL('.', (document.currentScript || {}).src || location.href).href; // the site's root
   const KEY = 'shahanshah-autoplay';
   const btn = document.querySelector('button.autoplay');
   if (!btn) return;
@@ -55,7 +56,7 @@
   film.innerHTML = '<div class="art"><img alt="" class="on"><img alt=""></div>'
     + '<div class="words"><div class="text"><p class="where"></p><p class="said"></p></div>'
     + '<div class="when" dir="ltr"><div class="axis"><span class="span"></span><span class="dot"></span></div>'
-    + '<p class="year"></p><p class="ends"><span></span><span></span></p></div></div>';
+    + '<p class="year"></p><p class="ends"><span></span><span></span></p></div><p class="credit" dir="ltr"></p></div>';
   document.body.appendChild(film);
   const layers = [...film.querySelectorAll('.art img')];
   let front = 0;
@@ -216,6 +217,72 @@
     pauseBtn.classList.toggle('hot', paused);
     bar.querySelector('.ap-full').classList.toggle('hot', cinema);
   };
+  // The soundscape (sound/sounds.json, build.py's Soundscape), well under the narrator: a music bed by the
+  // article's region (data-music; a battle's own music for a fight) and a bed by what it is about (data-sound: the
+  // town's murmur, the wind, or now and then a sound of battle). Each fades in and out as the article changes.
+  const EXT = opus ? '.ogg' : '.m4a';
+  const VOL = { music: 0.07, bed: 0.06, shot: 0.05 };
+  let sounds = null;
+  const loading = fetch(BASE + 'sound/sounds.json').then(r => r.json()).then(d => { sounds = d; }).catch(() => {});
+  const beds = {}; // channel -> {audio, src}
+  const fadeTo = (a, to, ms, done) => {
+    clearInterval(a.fading);
+    const from = a.volume, t0 = Date.now();
+    a.fading = setInterval(() => {
+      const k = Math.min(1, (Date.now() - t0) / ms);
+      a.volume = from + (to - from) * k;
+      if (k >= 1) { clearInterval(a.fading); if (done) done(); }
+    }, 50);
+  };
+  const channel = (name, src, vol) => {
+    const cur = beds[name];
+    if (cur && cur.src === src) { if (cur.audio.paused && running && !paused) cur.audio.play().catch(() => {}); return; }
+    if (cur) { const a = cur.audio; fadeTo(a, 0, 1500, () => a.pause()); delete beds[name]; }
+    if (!src) return;
+    const a = new Audio(BASE + src + EXT);
+    a.loop = true;
+    a.volume = 0;
+    beds[name] = { audio: a, src };
+    if (name === 'music') a.addEventListener('timeupdate', credit);
+    if (running && !paused) a.play().then(() => fadeTo(a, vol, 2500)).catch(() => {});
+  };
+  let shotTimer = 0;
+  const shots = () => {
+    clearTimeout(shotTimer);
+    if (!running || paused || !sounds || main.dataset.sound !== 'battle') return;
+    shotTimer = setTimeout(() => {
+      const s = new Audio(BASE + sounds.shots[Math.floor(Math.random() * sounds.shots.length)] + EXT);
+      s.volume = VOL.shot * (0.5 + Math.random() * 0.5);
+      s.play().catch(() => {});
+      shots();
+    }, 5000 + Math.random() * 9000);
+  };
+  const soundscape = () => {
+    if (!sounds) { loading.then(() => { if (sounds && running) soundscape(); }); return; }
+    const m = sounds.music[main.dataset.music || 'city'];
+    channel('music', m ? m.src : '', VOL.music);
+    channel('bed', sounds.beds[main.dataset.sound] || '', VOL.bed);
+    shots();
+  };
+  const hush = on => {
+    for (const b of Object.values(beds)) {
+      if (on) b.audio.pause();
+      else b.audio.play().then(() => { if (b.audio.volume < 0.01) fadeTo(b.audio, b.src.includes('/music/') ? VOL.music : VOL.bed, 2500); }).catch(() => {});
+    }
+    if (on) clearTimeout(shotTimer); else shots();
+  };
+  const silence = () => { channel('music', '', 0); channel('bed', '', 0); clearTimeout(shotTimer); };
+  // The music's credit, as its licence asks, under full screen's words.
+  function credit() {
+    const b = beds.music, m = sounds && sounds.music[main.dataset.music || 'city'];
+    if (!b || !m) return;
+    const t = b.audio.currentTime;
+    const track = m.tracks.filter(x => x.at <= t + 1).pop();
+    const line = track ? '♪ ' + track.credit : '';
+    const el = film.querySelector('.credit');
+    if (el.textContent !== line) { el.textContent = line; bar.title = line; }
+  }
+
   const blocked = () => { paused = true; left = 0; label(); }; // the browser wants a click before it speaks
 
   function step() {
@@ -248,6 +315,7 @@
       if (!next) throw new Error('no article');
       main.replaceWith(next);
       main = next;
+      soundscape();
       document.title = doc.title;
       history.replaceState(null, '', url);
       collect();
@@ -275,6 +343,7 @@
     audio.pause();
     store(null);
     bar.hidden = true;
+    silence();
     setCinema(false);
     if (reading) reading.classList.remove('reading');
     if (moving) settle(moving);
@@ -282,6 +351,7 @@
   function pause() {
     if (!running) return;
     paused = !paused;
+    hush(paused);
     if (paused) {
       clearTimeout(timer);
       if (!audio.paused) audio.pause(); else left = Math.max(0, left - (Date.now() - since));
@@ -317,6 +387,7 @@
     if (!stored()) store('on');
     bar.hidden = false;
     label();
+    soundscape();
     at = -1;
     if (!fromLoad) return step();
     window.scrollTo({ top: 0 });

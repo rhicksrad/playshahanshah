@@ -268,3 +268,6 @@ nav.top .links { flex-wrap: wrap; row-gap: 6px; }
 .cinema .words::-webkit-scrollbar { display: none; }
 @media (orientation: portrait) and (max-width: 760px) { .cinema .words { height: 45vh; max-height: none; padding: 14px 20px 18px; } }
 @media (max-height: 500px) { .cinema .words { height: 40vh; max-height: none; padding: 10px 24px 12px; } .cinema .said { font-size: 17px; } }
+/* Full screen's music credit (autoplay.js), as the tracks' licences ask */
+.cinema .words { position: relative; }
+.cinema .credit { position: absolute; right: max(24px, 8vw); bottom: 6px; margin: 0; font-size: 11px; color: var(--dim); max-width: 60%; text-align: right; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }

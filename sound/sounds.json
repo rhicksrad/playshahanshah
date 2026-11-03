@@ -1,0 +1,201 @@
+{
+ "music": {
+  "city": {
+   "src": "sound/music/persia_royal_road_loop",
+   "tracks": [
+    {
+     "at": 0.0,
+     "credit": "\"Desert Sanctuary\" by Tausdei, licensed under CC BY 3.0",
+     "page": "https://opengameart.org/content/desert-sanctuary"
+    },
+    {
+     "at": 171.47,
+     "credit": "\"Opium\" Kevin MacLeod (incompetech.com), licensed under Creative Commons: By Attribution 4.0",
+     "page": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100371"
+    }
+   ]
+  },
+  "media": {
+   "src": "sound/music/media_elam_loop",
+   "tracks": [
+    {
+     "at": 0.0,
+     "credit": "\"Temple of the Manes\" Kevin MacLeod (incompetech.com), licensed under Creative Commons: By Attribution 4.0",
+     "page": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100053"
+    },
+    {
+     "at": 139.44,
+     "credit": "\"Beautiful Oblivion\" by Scott Buckley, released under CC-BY 4.0. www.scottbuckley.com.au",
+     "page": "https://www.scottbuckley.com.au/library/beautiful-oblivion/"
+    }
+   ]
+  },
+  "egypt": {
+   "src": "sound/music/egypt_black_land_loop",
+   "tracks": [
+    {
+     "at": 0.0,
+     "credit": "\"Return of the Mummy\" Kevin MacLeod (incompetech.com), licensed under Creative Commons: By Attribution 4.0",
+     "page": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1700046"
+    },
+    {
+     "at": 154.07,
+     "credit": "\"Desert Mystic\" by PolygonDan, CC0",
+     "page": "https://opengameart.org/content/desertmystic-dynastic-egyptian-theme-cc0"
+    },
+    {
+     "at": 188.14,
+     "credit": "\"Shifting Sands of Ma-Kali\" by Hitctrl, CC BY 3.0",
+     "page": "https://opengameart.org/content/shifting-sands-of-ma-kali"
+    },
+    {
+     "at": 399.66,
+     "credit": "\"Tabuk\" Kevin MacLeod (incompetech.com), licensed under Creative Commons: By Attribution 4.0",
+     "page": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100818"
+    }
+   ]
+  },
+  "thrace": {
+   "src": "sound/music/thrace_north_wind_loop",
+   "tracks": [
+    {
+     "at": 0.0,
+     "credit": "\"Path Through the Mountains\" by Scott Buckley, released under CC-BY 4.0. www.scottbuckley.com.au",
+     "page": "https://www.scottbuckley.com.au/library/path-through-the-mountains/"
+    },
+    {
+     "at": 305.28,
+     "credit": "\"Old Road\" Kevin MacLeod (incompetech.com), licensed under Creative Commons: By Attribution 4.0",
+     "page": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100725"
+    },
+    {
+     "at": 413.23,
+     "credit": "\"Endless Expanse\" by Alexandr Zhelanov, CC BY 4.0",
+     "page": "https://opengameart.org/content/tribal-music"
+    }
+   ]
+  },
+  "ionia": {
+   "src": "sound/music/ionia_lydian_coast_loop",
+   "tracks": [
+    {
+     "at": 0.0,
+     "credit": "\"Mediterranean Breeze\" by Eric Matyas, www.soundimage.org, licensed under CC BY 3.0",
+     "page": "https://opengameart.org/content/mediterranean-breezelooping"
+    },
+    {
+     "at": 47.99,
+     "credit": "\"Chronicle\" by Scott Buckley, released under CC-BY 4.0. www.scottbuckley.com.au",
+     "page": "https://www.scottbuckley.com.au/library/chronicle/"
+    },
+    {
+     "at": 293.57,
+     "credit": "\"Tenebrous Brothers Carnival - Snake Lady\" Kevin MacLeod (incompetech.com), licensed under Creative Commons: By Attribution 4.0",
+     "page": "https://incompetech.com/music/royalty-free/music.html"
+    }
+   ]
+  },
+  "greece": {
+   "src": "sound/music/greece_wine_dark_sea_loop",
+   "tracks": [
+    {
+     "at": 0.0,
+     "credit": "\"The Great Sea\" by Scott Buckley, released under CC-BY 4.0. www.scottbuckley.com.au",
+     "page": "https://www.scottbuckley.com.au/library/the-great-sea/"
+    },
+    {
+     "at": 268.2,
+     "credit": "\"Walking with Poseidon\" by mvrasseli, CC BY 3.0",
+     "page": "https://opengameart.org/content/walking-with-poseidon"
+    },
+    {
+     "at": 302.82,
+     "credit": "\"Katabasis I\" by Scott Buckley, released under CC-BY 4.0. www.scottbuckley.com.au",
+     "page": "https://www.scottbuckley.com.au/library/katabasis-i/"
+    }
+   ]
+  },
+  "battle_persia": {
+   "src": "sound/music/battle_persia_kings_host_loop",
+   "tracks": [
+    {
+     "at": 0.0,
+     "credit": "\"Legionnaire (2022)\" by Scott Buckley, released under CC-BY 4.0. www.scottbuckley.com.au",
+     "page": "https://www.scottbuckley.com.au/library/legionnaire-2022/"
+    },
+    {
+     "at": 171.49,
+     "credit": "\"Firesong\" Kevin MacLeod (incompetech.com), licensed under Creative Commons: By Attribution 4.0",
+     "page": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100598"
+    },
+    {
+     "at": 376.01,
+     "credit": "\"Crusade\" Kevin MacLeod (incompetech.com), licensed under Creative Commons: By Attribution 4.0",
+     "page": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100884"
+    }
+   ]
+  },
+  "battle_egypt": {
+   "src": "sound/music/battle_egypt_pelusium_loop",
+   "tracks": [
+    {
+     "at": 0.0,
+     "credit": "\"Arabesque\" by brainiac256, CC BY 3.0",
+     "page": "https://opengameart.org/content/arabesque"
+    },
+    {
+     "at": 195.75,
+     "credit": "\"Curse of the Scarab\" Kevin MacLeod (incompetech.com), licensed under Creative Commons: By Attribution 4.0",
+     "page": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1600014"
+    }
+   ]
+  },
+  "battle_thrace": {
+   "src": "sound/music/battle_thrace_riders_loop",
+   "tracks": [
+    {
+     "at": 0.0,
+     "credit": "\"Death and Axes\" Kevin MacLeod (incompetech.com), licensed under Creative Commons: By Attribution 4.0",
+     "page": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1700049"
+    },
+    {
+     "at": 154.87,
+     "credit": "\"Battle Theme 1\" by Alexandr Zhelanov, CC BY 4.0",
+     "page": "https://opengameart.org/content/battle-themes"
+    },
+    {
+     "at": 248.87,
+     "credit": "\"Drums in the Deepwood: A Hunger to Carry Off Flocks\" by Elyvilon, CC BY 4.0",
+     "page": "https://opengameart.org/content/dark-forest-tribal-troll-folk-shamanic-music-drums-in-the-deepwood"
+    }
+   ]
+  },
+  "battle_greece": {
+   "src": "sound/music/battle_greece_phalanx_loop",
+   "tracks": [
+    {
+     "at": 0.0,
+     "credit": "\"Rites of Passage\" by Scott Buckley, released under CC-BY 4.0. www.scottbuckley.com.au",
+     "page": "https://www.scottbuckley.com.au/library/rites-of-passage/"
+    },
+    {
+     "at": 322.17,
+     "credit": "\"Noble Race\" Kevin MacLeod (incompetech.com), licensed under Creative Commons: By Attribution 4.0",
+     "page": "https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100888"
+    }
+   ]
+  }
+ },
+ "beds": {
+  "town": "sound/beds/town",
+  "wind": "sound/beds/wind"
+ },
+ "shots": [
+  "sound/shots/sword_clash_hq",
+  "sound/shots/war_horn_distant",
+  "sound/shots/bow_release_longbow",
+  "sound/shots/arrow_hit_wood",
+  "sound/shots/charge_yell2",
+  "sound/shots/charge_yell5"
+ ]
+}
