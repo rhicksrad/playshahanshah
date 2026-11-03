@@ -156,6 +156,13 @@
   // Drifts `img` for `ms` at one steady rate: a fresh pan for a new painting; for the one already moving (the
   // next paragraph under the same painting, an "In the game" line) the same pan carries on unbroken.
   const RATE = 0.009; // zoom added a second
+  // Where a painting's pan closes in: on its main faces where the build found them (data-focus, from
+  // tools/encyclopedia/focal.py), drifting them a little toward the middle; else one of the PANS.
+  const aim = img => {
+    const f = (img.dataset.focus || '').split(',').map(Number);
+    if (f.length !== 2 || f.some(isNaN)) return PANS[drift % PANS.length];
+    return [`${(f[0] * 100).toFixed(1)}% ${(f[1] * 100).toFixed(1)}%`, (0.5 - f[0]) * 6, (0.45 - f[1]) * 6];
+  };
   const kenBurns = (img, ms) => {
     if (!img) return;
     const el = canvas(img);
@@ -165,10 +172,10 @@
       pic = img;
       el.style.transition = 'none';
       el.style.transform = 'scale(1)';
-      el.style.transformOrigin = PANS[drift % PANS.length][0];
+      el.style.transformOrigin = aim(img)[0];
       void el.offsetWidth;
     }
-    const [, x, y] = PANS[drift % PANS.length];
+    const [, x, y] = aim(img);
     const now = getComputedStyle(el).transform;
     const z0 = now.startsWith('matrix(') ? parseFloat(now.slice(7)) : 1;
     el.style.transition = 'none';
