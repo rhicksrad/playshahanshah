@@ -241,7 +241,10 @@
     return actx;
   };
   const leveled = (src, v) => {
-    const a = new Audio(src);
+    const a = new Audio();
+    // Another site's audio (the soundtrack) reaches Web Audio only when fetched with CORS.
+    if (/^https?:/.test(src) && !src.startsWith(location.origin)) a.crossOrigin = 'anonymous';
+    a.src = src;
     const c = context();
     if (c) {
       try {
@@ -268,8 +271,12 @@
     if (cur && cur.src === src) { if (cur.audio.paused && running && !paused) cur.audio.play().catch(() => {}); return; }
     if (cur) { const a = cur.audio; fadeTo(a, 0, 1500, () => a.pause()); delete beds[name]; }
     if (!src) return;
-    const a = leveled(BASE + src + EXT, 0);
-    a.loop = true;
+    const a = leveled((/^https?:/.test(src) ? src : BASE + src) + EXT, 0);
+    a.loop = name !== 'music';
+    if (name === 'music') {
+      a.addEventListener('ended', () => { track = (track + 1) % playlist.length; resumeAt = 0; music(); });
+      a.addEventListener('loadedmetadata', () => { if (resumeAt) { a.currentTime = resumeAt; resumeAt = 0; } });
+    }
     beds[name] = { audio: a, src };
     if (name === 'music') a.addEventListener('timeupdate', credit);
     if (running && !paused) a.play().then(() => fadeTo(a, vol, 2500)).catch(() => {});
@@ -287,8 +294,7 @@
   };
   const soundscape = () => {
     if (!sounds) { loading.then(() => { if (sounds && running) soundscape(); }); return; }
-    const m = sounds.music[main.dataset.music || 'city'];
-    channel('music', m ? m.src : '', VOL.music);
+    music();
     const town = main.dataset.sound === 'town';
     scene();
     if (fighting()) channel('bed', sounds.beds.battle || '', VOL.battle);
@@ -324,9 +330,11 @@
     if (now !== crowd) { crowd = now; if (running && sounds) soundscape(); }
   };
   const hush = on => {
-    for (const b of Object.values(beds)) {
+    for (const [name, b] of Object.entries(beds)) {
+      const vol = name === 'music' ? VOL.music : name === 'scene' ? VOL.scene
+        : b.src.includes('/town') ? VOL.town : b.src.includes('/battle') ? VOL.battle : VOL.bed;
       if (on) b.audio.pause();
-      else b.audio.play().then(() => { if (level(b.audio) < 0.01) fadeTo(b.audio, b.src.includes('/music/') ? VOL.music : b.src.includes('/town') ? VOL.town : b.src.includes('/battle') ? VOL.battle : b.src.includes('/fx/') ? VOL.scene : VOL.bed, 2500); }).catch(() => {});
+      else b.audio.play().then(() => { if (level(b.audio) < 0.01) fadeTo(b.audio, vol, 2500); }).catch(() => {});
     }
     if (on) { clearTimeout(shotTimer); clearTimeout(cueTimer); } else { shots(); if (sounds) scene(); }
   };
@@ -334,13 +342,29 @@
     channel('music', '', 0); channel('bed', '', 0); channel('scene', '', 0);
     clearTimeout(shotTimer); clearTimeout(cueTimer);
   };
-  // The music's credit, as its licence asks, under full screen's words.
+  // The game's whole soundtrack, from the title's theme on, one track after another (rhicksrad/shahanshah-music,
+  // tools/website/music_playlist.py). Where it had got to is kept for this tab, so the next page carries on.
+  const MUSIC_BASE = 'https://rhicksrad.github.io/shahanshah-music/';
+  const SAVE = 'shahanshah-music';
+  let playlist = null, track = 0, resumeAt = 0, saved = 0;
+  const listing = fetch(MUSIC_BASE + 'playlist.json').then(r => r.json()).then(d => { playlist = d; }).catch(() => {});
+  try {
+    const was = JSON.parse(sessionStorage.getItem(SAVE) || 'null');
+    if (was) { track = was.i || 0; resumeAt = was.t || 0; }
+  } catch (e) {}
+  function music() {
+    if (!playlist) { listing.then(() => { if (playlist && running) music(); }); return; }
+    channel('music', MUSIC_BASE + playlist[track % playlist.length].src, VOL.music);
+  }
+  // The track's credit, as its licence asks, under full screen's words; and where the music is, kept.
   function credit() {
-    const b = beds.music, m = sounds && sounds.music[main.dataset.music || 'city'];
-    if (!b || !m) return;
-    const t = b.audio.currentTime;
-    const track = m.tracks.filter(x => x.at <= t + 1).pop();
-    const line = track ? '♪ ' + track.credit : '';
+    const b = beds.music;
+    if (!b || !playlist) return;
+    if (Date.now() - saved > 4000) {
+      saved = Date.now();
+      try { sessionStorage.setItem(SAVE, JSON.stringify({ i: track, t: b.audio.currentTime })); } catch (e) {}
+    }
+    const line = '♪ ' + playlist[track % playlist.length].credit;
     const el = film.querySelector('.credit');
     if (el.textContent !== line) { el.textContent = line; bar.title = line; }
   }
