@@ -39,7 +39,20 @@
     if (reading) reading.classList.remove('reading');
     reading = para(el);
     reading.classList.add('reading');
-    reading.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    frame(reading);
+  };
+  // Keeps the painting in frame: the paragraph's section (or, for the lead, the article's head) sits at the top
+  // under the nav, unless the paragraph would then run below the bar; then it scrolls just enough to show it.
+  const frame = p => {
+    const anchor = p.closest('section.sec') || main.querySelector('header.hero, header.topic-head') || p;
+    const nav = document.querySelector('nav.top');
+    const navH = nav && getComputedStyle(nav).position !== 'static' ? nav.offsetHeight : 0;
+    const room = window.innerHeight - (bar.hidden ? 0 : bar.offsetHeight + 32);
+    const y = window.scrollY;
+    let top = anchor.getBoundingClientRect().top + y - navH - 12;
+    const bottom = p.getBoundingClientRect().bottom + y + 12;
+    if (bottom - top > room) top = bottom - room;
+    window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
   };
   const label = () => {
     pauseBtn.querySelector('span').textContent = paused ? btn.dataset.resume : btn.dataset.pause;
