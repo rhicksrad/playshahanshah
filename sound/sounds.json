@@ -187,6 +187,7 @@
   }
  },
  "beds": {
+  "battle": "sound/beds/battle",
   "town": "sound/beds/town",
   "wind": "sound/beds/wind"
  },

@@ -124,6 +124,7 @@
     if (reading) reading.classList.remove('reading');
     reading = para(el);
     reading.classList.add('reading');
+    if (sounds) soundscape();
     if (cinema) {
       setWords(title(), reading.textContent.trim());
       timeline(reading);
@@ -223,18 +224,42 @@
   // town's murmur, the wind, or now and then a sound of battle). Each fades in and out as the article changes.
   const EXT = opus ? '.ogg' : '.m4a';
   // The music files sit near -21 LUFS and the town and wind beds near -13, so the beds play far lower.
-  const VOL = { music: 0.12, bed: 0.03, town: 0.02, shot: 0.05 };
+  const VOL = { music: 0.12, bed: 0.03, town: 0.02, battle: 0.12, shot: 0.1 };
   const CROWD = 6; // faces a painting shows (data-faces) for the town's murmur to play under it
   let crowd = false;
   let sounds = null;
   const loading = fetch(BASE + 'sound/sounds.json').then(r => r.json()).then(d => { sounds = d; }).catch(() => {});
   const beds = {}; // channel -> {audio, src}
+  // Levels go through Web Audio gain: Safari on iPhone and iPad ignores an audio element's volume and plays every
+  // bed at full loudness, louder than the narrator. Without Web Audio the element's own volume is used.
+  let actx = null;
+  const context = () => {
+    if (!actx && (window.AudioContext || window.webkitAudioContext)) {
+      try { actx = new (window.AudioContext || window.webkitAudioContext)(); } catch (e) { actx = null; }
+    }
+    if (actx && actx.state === 'suspended') actx.resume().catch(() => {});
+    return actx;
+  };
+  const leveled = (src, v) => {
+    const a = new Audio(src);
+    const c = context();
+    if (c) {
+      try {
+        a.gain = c.createGain();
+        a.gain.gain.value = v;
+        c.createMediaElementSource(a).connect(a.gain).connect(c.destination);
+      } catch (e) { a.gain = null; a.volume = v; }
+    } else a.volume = v;
+    return a;
+  };
+  const level = a => (a.gain ? a.gain.gain.value : a.volume);
+  const setLevel = (a, v) => { if (a.gain) a.gain.gain.value = v; else a.volume = v; };
   const fadeTo = (a, to, ms, done) => {
     clearInterval(a.fading);
-    const from = a.volume, t0 = Date.now();
+    const from = level(a), t0 = Date.now();
     a.fading = setInterval(() => {
       const k = Math.min(1, (Date.now() - t0) / ms);
-      a.volume = from + (to - from) * k;
+      setLevel(a, from + (to - from) * k);
       if (k >= 1) { clearInterval(a.fading); if (done) done(); }
     }, 50);
   };
@@ -243,9 +268,8 @@
     if (cur && cur.src === src) { if (cur.audio.paused && running && !paused) cur.audio.play().catch(() => {}); return; }
     if (cur) { const a = cur.audio; fadeTo(a, 0, 1500, () => a.pause()); delete beds[name]; }
     if (!src) return;
-    const a = new Audio(BASE + src + EXT);
+    const a = leveled(BASE + src + EXT, 0);
     a.loop = true;
-    a.volume = 0;
     beds[name] = { audio: a, src };
     if (name === 'music') a.addEventListener('timeupdate', credit);
     if (running && !paused) a.play().then(() => fadeTo(a, vol, 2500)).catch(() => {});
@@ -253,10 +277,10 @@
   let shotTimer = 0;
   const shots = () => {
     clearTimeout(shotTimer);
-    if (!running || paused || !sounds || main.dataset.sound !== 'battle') return;
+    if (!running || paused || !sounds || !fighting()) return;
     shotTimer = setTimeout(() => {
-      const s = new Audio(BASE + sounds.shots[Math.floor(Math.random() * sounds.shots.length)] + EXT);
-      s.volume = VOL.shot * (0.5 + Math.random() * 0.5);
+      const s = leveled(BASE + sounds.shots[Math.floor(Math.random() * sounds.shots.length)] + EXT,
+        VOL.shot * (0.5 + Math.random() * 0.5));
       s.play().catch(() => {});
       shots();
     }, 5000 + Math.random() * 9000);
@@ -266,9 +290,13 @@
     const m = sounds.music[main.dataset.music || 'city'];
     channel('music', m ? m.src : '', VOL.music);
     const town = main.dataset.sound === 'town';
-    channel('bed', town && !crowd ? '' : sounds.beds[main.dataset.sound] || '', town ? VOL.town : VOL.bed);
+    if (fighting()) channel('bed', sounds.beds.battle || '', VOL.battle);
+    else channel('bed', town && !crowd ? '' : sounds.beds[main.dataset.sound] || '', town ? VOL.town : VOL.bed);
     shots();
   };
+  // A battle: the whole article (data-sound="battle"), or the section being read tells of fighting (data-fight).
+  const fighting = () => main.dataset.sound === 'battle'
+    || !!(reading && reading.closest('section.sec[data-fight]'));
   // The town's murmur only under a painting of a crowd.
   const crowdOf = img => {
     const now = !!img && +(img.dataset.faces || 0) >= CROWD;
@@ -277,7 +305,7 @@
   const hush = on => {
     for (const b of Object.values(beds)) {
       if (on) b.audio.pause();
-      else b.audio.play().then(() => { if (b.audio.volume < 0.01) fadeTo(b.audio, b.src.includes('/music/') ? VOL.music : b.src.includes('/town') ? VOL.town : VOL.bed, 2500); }).catch(() => {});
+      else b.audio.play().then(() => { if (level(b.audio) < 0.01) fadeTo(b.audio, b.src.includes('/music/') ? VOL.music : b.src.includes('/town') ? VOL.town : b.src.includes('/battle') ? VOL.battle : VOL.bed, 2500); }).catch(() => {});
     }
     if (on) clearTimeout(shotTimer); else shots();
   };
@@ -404,8 +432,8 @@
     wait(1800); // the article's painting and title first
   }
 
-  btn.addEventListener('click', () => { if (running) stop(); else start(false); });
-  pauseBtn.addEventListener('click', pause);
+  btn.addEventListener('click', () => { context(); if (running) stop(); else start(false); });
+  pauseBtn.addEventListener('click', () => { context(); pause(); });
   bar.querySelector('.ap-next').addEventListener('click', nextArticle);
   bar.querySelector('.ap-stop').addEventListener('click', stop);
   bar.querySelector('.ap-full').addEventListener('click', () => setCinema(!cinema));
