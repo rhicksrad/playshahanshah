@@ -23,7 +23,6 @@
   const silent = () => { try { return localStorage.getItem('shahanshah-narrator') === 'off'; } catch (e) { return false; } };
   let at = -1, timer = 0, left = 0, since = 0, running = false, paused = false, reading = null;
   let pic = null, drift = 0, driftEnd = 0;
-  const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
   // The pans: where the zoom is anchored, and the way it drifts (percent of the picture).
   const PANS = [['30% 40%', 2, 1], ['70% 35%', -2, 1], ['50% 70%', 0, -2], ['40% 50%', 1.5, 0], ['60% 55%', -1.5, -1]];
 
@@ -53,7 +52,7 @@
   };
   // Drifts `img` for `ms`: a fresh pan for a new painting, a little further for the one already moving.
   const kenBurns = (img, ms) => {
-    if (still || !img) return;
+    if (!img) return;
     if (pic && pic !== img) settle(pic);
     const again = pic === img;
     if (!again) { pic = img; drift++; img.style.transformOrigin = PANS[drift % PANS.length][0]; }
