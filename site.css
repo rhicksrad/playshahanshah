@@ -231,3 +231,20 @@ html.cinema-on { overflow: hidden; }
 html.cinema-on .ap-bar { top: 16px; bottom: auto; transition: opacity .4s; }
 html.cinema-on .cinema.idle ~ .ap-bar, html.cinema-on:has(.cinema.idle) .ap-bar { opacity: 0; }
 html.cinema-on .ap-bar:hover { opacity: 1 !important; }
+/* Full screen's cross-fading paintings, fading words and timeline */
+.cinema .art { position: relative; }
+.cinema .art img { position: absolute; inset: 0; opacity: 0; transition: opacity 1.4s ease; }
+.cinema .art img.on { opacity: 1; }
+.cinema .words { display: flex; gap: 32px; align-items: flex-start; }
+.cinema .text { flex: 1; min-width: 0; transition: opacity .35s ease; }
+.cinema .text.fade { opacity: 0; }
+.cinema .when { flex: 0 0 260px; margin-top: 6px; }
+.cinema .when[hidden] { display: none; }
+.cinema .axis { position: relative; height: 18px; border-bottom: 1px solid var(--gold-dim); margin: 26px 6px 0; }
+.cinema .axis .span { position: absolute; bottom: -3px; height: 5px; background: var(--gold-dim); border-radius: 3px; transition: left .8s ease, width .8s ease; }
+.cinema .axis .span[hidden] { display: none; }
+.cinema .axis .dot { position: absolute; bottom: -6px; width: 11px; height: 11px; margin-left: -5px; border-radius: 50%; background: var(--gold);
+  box-shadow: 0 0 0 3px rgba(210, 169, 78, .25); transition: left .8s ease; }
+.cinema .year { margin: 8px 0 0; text-align: center; color: var(--gold); font-family: 'Cinzel', Georgia, serif; font-size: 17px; }
+.cinema .ends { display: flex; justify-content: space-between; margin: 2px 0 0; font-size: 12px; color: var(--dim); }
+@media (max-width: 700px) { .cinema .words { flex-direction: column; gap: 8px; } .cinema .when { flex-basis: auto; width: 100%; } }

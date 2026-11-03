@@ -4,7 +4,8 @@
 // A bar at the bottom pauses, skips to the next article, goes full screen or stops. The run is kept for this tab only.
 // While a paragraph is read, its painting drifts in a slow pan and zoom, as in a documentary. Full screen shows
 // only that: the painting filling the screen and the words being read in a box below it; there the next article
-// is fetched into the page, so the screen stays full.
+// is fetched into the page, so the screen stays full. Paintings cross-fade, the words fade, and a small timeline
+// beside them marks the years the article (or the paragraph, where it names one) is about.
 (() => {
   const KEY = 'shahanshah-autoplay';
   const btn = document.querySelector('button.autoplay');
@@ -46,9 +47,55 @@
   const film = document.createElement('div');
   film.className = 'cinema';
   film.hidden = true;
-  film.innerHTML = '<div class="art"><img alt=""></div><div class="words"><p class="where"></p><p class="said"></p></div>';
+  film.innerHTML = '<div class="art"><img alt="" class="on"><img alt=""></div>'
+    + '<div class="words"><div class="text"><p class="where"></p><p class="said"></p></div>'
+    + '<div class="when" dir="ltr"><div class="axis"><span class="span"></span><span class="dot"></span></div>'
+    + '<p class="year"></p><p class="ends"><span></span><span></span></p></div></div>';
   document.body.appendChild(film);
-  const filmImg = film.querySelector('img'), where = film.querySelector('.where'), said = film.querySelector('.said');
+  const layers = [...film.querySelectorAll('.art img')];
+  let front = 0;
+  const where = film.querySelector('.where'), said = film.querySelector('.said');
+  // The words fade out, change, and fade back in.
+  let wordsTimer = 0;
+  const setWords = (place, words) => {
+    clearTimeout(wordsTimer);
+    film.querySelector('.text').classList.add('fade');
+    wordsTimer = setTimeout(() => {
+      where.textContent = place;
+      said.textContent = words;
+      film.querySelector('.text').classList.remove('fade');
+    }, 350);
+  };
+
+  // The timeline: the years 560 to 470 BCE, the article's span lit, a dot on the paragraph's year where it names one.
+  const FA = '۰۱۲۳۴۵۶۷۸۹';
+  const digits = n => btn.dataset.digits === 'fa' ? String(n).replace(/\d/g, d => FA[d]) : String(n);
+  const yearLabel = (a, b) => (btn.dataset.year || '{y} BCE').replace('{y}', b && b !== a ? `${digits(a)}–${digits(b)}` : digits(a));
+  const BCE_TOKEN = (btn.dataset.year || '{y} BCE').replace('{y}', '').trim();
+  const yearsIn = text => {
+    const t = text.replace(/[۰-۹]/g, d => FA.indexOf(d));
+    if (!BCE_TOKEN || !t.includes(BCE_TOKEN)) return [];
+    return [...t.matchAll(/(?<!\d)([4-7]\d\d)(?!\d)/g)].map(m => +m[1]);
+  };
+  const timeline = p => {
+    const when = film.querySelector('.when');
+    const span = (main.dataset.span || '').split(',').filter(Boolean).map(Number);
+    const named = p ? yearsIn(p.textContent) : [];
+    const ys = named.length ? named : span;
+    when.hidden = !ys.length;
+    if (!ys.length) return;
+    const old = Math.max(560, ...ys, ...span) + 5, late = Math.min(470, ...ys, ...span) - 5;
+    const x = y => ((old - y) / (old - late) * 100).toFixed(2) + '%';
+    const s = when.querySelector('.span'), d = when.querySelector('.dot');
+    if (span.length) { s.style.left = x(Math.max(...span)); s.style.width = `calc(${x(Math.min(...span))} - ${x(Math.max(...span))} + 4px)`; s.hidden = false; }
+    else s.hidden = true;
+    const a = Math.max(...ys), b = Math.min(...ys);
+    d.style.left = x((a + b) / 2);
+    when.querySelector('.year').textContent = yearLabel(a, b);
+    const ends = when.querySelectorAll('.ends span');
+    ends[0].textContent = yearLabel(old - 5);
+    ends[1].textContent = yearLabel(late + 5);
+  };
   let idle = 0;
   const wake = () => {
     film.classList.remove('idle');
@@ -69,8 +116,8 @@
     reading = para(el);
     reading.classList.add('reading');
     if (cinema) {
-      where.textContent = title();
-      said.textContent = reading.textContent.trim();
+      setWords(title(), reading.textContent.trim());
+      timeline(reading);
     } else frame(reading);
   };
   // The painting the paragraph belongs to: its section's, or for the article's own lines the head's.
@@ -78,36 +125,51 @@
     const sec = p.closest('section.sec');
     return (sec && sec.querySelector('figure img')) || main.querySelector('header.hero img, .lead-art img');
   };
-  // What moves: the page's painting, or full screen's copy of it.
+  // What moves: the page's painting, or in full screen its copy, which cross-fades in over the last one (still
+  // drifting) once it has loaded.
   const canvas = img => {
     if (!cinema) return img;
     const src = img.currentSrc || img.src;
-    if (filmImg.dataset.src !== src) { filmImg.dataset.src = src; filmImg.src = src; }
-    return filmImg;
+    if (layers[front].dataset.src === src) return layers[front];
+    const out = layers[front];
+    front = 1 - front;
+    const inn = layers[front];
+    inn.dataset.src = src;
+    inn.style.transition = 'none';
+    inn.style.transform = 'scale(1)';
+    inn.src = src;
+    const swap = () => { inn.classList.add('on'); out.classList.remove('on'); };
+    (inn.decode ? inn.decode() : Promise.resolve()).then(swap, swap);
+    if (moving === out) { moving = null; pic = null; }
+    return inn;
   };
   let moving = null;
   // Drifts `img` for `ms`: a fresh pan for a new painting, a little further for the one already moving.
+  // Drifts `img` for `ms` at one steady rate: a fresh pan for a new painting; for the one already moving (the
+  // next paragraph under the same painting, an "In the game" line) the same pan carries on unbroken.
+  const RATE = 0.009; // zoom added a second
   const kenBurns = (img, ms) => {
     if (!img) return;
-    const again = pic === img;
     const el = canvas(img);
-    if (moving && moving !== el) settle(moving);
-    if (!again || moving !== el) {
-      if (!again) drift++;
+    if (moving && moving !== el && !layers.includes(moving)) settle(moving);
+    if (pic !== img || moving !== el) {
+      if (pic !== img) drift++;
       pic = img;
       el.style.transition = 'none';
       el.style.transform = 'scale(1)';
       el.style.transformOrigin = PANS[drift % PANS.length][0];
+      void el.offsetWidth;
     }
     const [, x, y] = PANS[drift % PANS.length];
     const now = getComputedStyle(el).transform;
+    const z0 = now.startsWith('matrix(') ? parseFloat(now.slice(7)) : 1;
     el.style.transition = 'none';
     el.style.transform = now === 'none' ? 'scale(1)' : now;
     void el.offsetWidth;
-    const more = again && moving === el;
-    const z = more ? 1.3 : 1.18, k = more ? 1.6 : 1;
-    el.style.transition = `transform ${Math.max(1000, ms)}ms linear`;
-    el.style.transform = `scale(${z}) translate(${x * k}%, ${y * k}%)`;
+    const run = Math.max(1000, ms) + 1500; // overlaps the next paragraph's start, so the drift never halts
+    const z = Math.min(1.45, z0 + RATE * run / 1000), k = (z - 1) / 0.18;
+    el.style.transition = `transform ${run}ms linear`;
+    el.style.transform = `scale(${z.toFixed(4)}) translate(${(x * k).toFixed(3)}%, ${(y * k).toFixed(3)}%)`;
     moving = el;
   };
   const freeze = () => {
@@ -177,9 +239,8 @@
       at = -1;
       reading = null;
       if (moving) settle(moving);
-      filmImg.dataset.src = '';
-      where.textContent = title();
-      said.textContent = '';
+      setWords(title(), '');
+      timeline(null);
       const head = main.querySelector('header.hero img, .lead-art img');
       if (head) kenBurns(head, 1800);
       if (!paused) wait(1800);
@@ -227,6 +288,7 @@
       wake();
       where.textContent = title();
       said.textContent = reading ? reading.textContent.trim() : '';
+      timeline(reading);
     } else if (document.fullscreenElement) document.exitFullscreen().catch(() => {});
     if (moving) settle(moving);
     if (running && reading && !paused) kenBurns(painting(reading), audio.paused ? left : ((audio.duration || 20) - audio.currentTime) * 1000);
