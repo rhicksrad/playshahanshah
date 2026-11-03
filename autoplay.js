@@ -103,6 +103,7 @@
     idle = setTimeout(() => film.classList.add('idle'), 2500);
   };
   film.addEventListener('mousemove', wake);
+  film.addEventListener('touchstart', wake, { passive: true });
 
   const para = el => el.closest('p') || el.parentElement;
   const dwell = p => Math.min(9000, Math.max(3000, 2000 + (p ? p.textContent.length : 0) * 25));

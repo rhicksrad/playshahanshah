@@ -1,5 +1,5 @@
 // Any painting opens full screen on a click: Esc, a click or the close button shuts it, and the arrow keys
-// step through the page's paintings. The card thumbnails stay links to their pages.
+// step through the page's paintings, as a swipe does on a phone. The card thumbnails stay links to their pages.
 (() => {
   const pics = [...document.querySelectorAll('img')].filter(i => !i.closest('a.card') && !i.closest('nav'));
   if (!pics.length) return;
@@ -38,6 +38,18 @@
     (i.closest('a') || i).addEventListener('click', e => { e.preventDefault(); show(n); });
   });
   box.addEventListener('click', close);
+  // A finger swipes between the paintings; a tap still closes.
+  let x0 = null, y0 = 0, swiped = false;
+  box.addEventListener('touchstart', e => { if (e.touches.length === 1) { x0 = e.touches[0].clientX; y0 = e.touches[0].clientY; swiped = false; } }, { passive: true });
+  box.addEventListener('touchend', e => {
+    if (x0 === null) return;
+    const t = e.changedTouches[0], dx = t.clientX - x0, dy = t.clientY - y0;
+    x0 = null;
+    if (Math.abs(dx) < 40 || Math.abs(dx) < Math.abs(dy) * 1.5) return;
+    swiped = true;
+    show(at + ((dx < 0) === (document.dir !== 'rtl') ? 1 : -1));
+  });
+  box.addEventListener('click', e => { if (swiped) { swiped = false; e.stopImmediatePropagation(); } }, true);
   document.addEventListener('keydown', e => {
     if (box.hidden) return;
     if (e.key === 'Escape') close();

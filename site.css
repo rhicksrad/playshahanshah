@@ -248,3 +248,20 @@ html.cinema-on .ap-bar:hover { opacity: 1 !important; }
 .cinema .year { margin: 8px 0 0; text-align: center; color: var(--gold); font-family: 'Cinzel', Georgia, serif; font-size: 17px; }
 .cinema .ends { display: flex; justify-content: space-between; margin: 2px 0 0; font-size: 12px; color: var(--dim); }
 @media (max-width: 700px) { .cinema .words { flex-direction: column; gap: 8px; } .cinema .when { flex-basis: auto; width: 100%; } }
+/* Phones and tablets */
+nav.top .links a, nav.top .brand, button.narr-toggle, .ap-bar button { white-space: nowrap; }
+nav.top .links { flex-wrap: wrap; row-gap: 6px; }
+@media (max-width: 900px) { nav.top { flex-wrap: wrap; gap: 6px 14px; } nav.top .links { gap: 6px 14px; } }
+/* A nav that wraps to three rows would hold a third of a phone's screen: it scrolls away with the page there */
+@media (max-width: 760px), (max-height: 500px) { nav.top { position: static; } }
+@media (max-width: 400px) { .ap-bar { gap: 6px; padding: 6px; } .ap-bar button { padding: 8px 10px; } }
+/* Fingers: the small round play buttons and the bar's buttons get a bigger place to land */
+@media (pointer: coarse) {
+  button.narr.mini { position: relative; }
+  button.narr.mini::after { content: ""; position: absolute; inset: -10px; }
+  .ap-bar button { min-height: 40px; }
+  .lightbox .x { padding: 6px 10px; }
+}
+/* Full screen on a phone: more room for the words in portrait and on a short landscape screen */
+@media (orientation: portrait) and (max-width: 760px) { .cinema .words { max-height: 45vh; padding: 14px 20px 18px; } }
+@media (max-height: 500px) { .cinema .words { max-height: 40vh; padding: 10px 24px 12px; } .cinema .said { font-size: 17px; } }
