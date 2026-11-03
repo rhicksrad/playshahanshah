@@ -166,6 +166,7 @@
   };
   const kenBurns = (img, ms) => {
     if (!img) return;
+    crowdOf(img);
     const el = canvas(img);
     if (moving && moving !== el && !layers.includes(moving)) settle(moving);
     if (pic !== img || moving !== el) {
@@ -221,7 +222,9 @@
   // article's region (data-music; a battle's own music for a fight) and a bed by what it is about (data-sound: the
   // town's murmur, the wind, or now and then a sound of battle). Each fades in and out as the article changes.
   const EXT = opus ? '.ogg' : '.m4a';
-  const VOL = { music: 0.07, bed: 0.06, shot: 0.05 };
+  const VOL = { music: 0.07, bed: 0.06, town: 0.025, shot: 0.05 };
+  const CROWD = 6; // faces a painting shows (data-faces) for the town's murmur to play under it
+  let crowd = false;
   let sounds = null;
   const loading = fetch(BASE + 'sound/sounds.json').then(r => r.json()).then(d => { sounds = d; }).catch(() => {});
   const beds = {}; // channel -> {audio, src}
@@ -261,13 +264,19 @@
     if (!sounds) { loading.then(() => { if (sounds && running) soundscape(); }); return; }
     const m = sounds.music[main.dataset.music || 'city'];
     channel('music', m ? m.src : '', VOL.music);
-    channel('bed', sounds.beds[main.dataset.sound] || '', VOL.bed);
+    const town = main.dataset.sound === 'town';
+    channel('bed', town && !crowd ? '' : sounds.beds[main.dataset.sound] || '', town ? VOL.town : VOL.bed);
     shots();
+  };
+  // The town's murmur only under a painting of a crowd.
+  const crowdOf = img => {
+    const now = !!img && +(img.dataset.faces || 0) >= CROWD;
+    if (now !== crowd) { crowd = now; if (running && sounds) soundscape(); }
   };
   const hush = on => {
     for (const b of Object.values(beds)) {
       if (on) b.audio.pause();
-      else b.audio.play().then(() => { if (b.audio.volume < 0.01) fadeTo(b.audio, b.src.includes('/music/') ? VOL.music : VOL.bed, 2500); }).catch(() => {});
+      else b.audio.play().then(() => { if (b.audio.volume < 0.01) fadeTo(b.audio, b.src.includes('/music/') ? VOL.music : b.src.includes('/town') ? VOL.town : VOL.bed, 2500); }).catch(() => {});
     }
     if (on) clearTimeout(shotTimer); else shots();
   };
