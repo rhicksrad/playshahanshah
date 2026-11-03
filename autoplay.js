@@ -84,7 +84,9 @@
   };
   const timeline = p => {
     const when = film.querySelector('.when');
-    const span = (main.dataset.span || '').split(',').filter(Boolean).map(Number);
+    // An article that names no years of its own sits in the game's era, Cyrus to Mycale.
+    const own = (main.dataset.span || '').split(',').filter(Boolean).map(Number);
+    const span = own.length ? own : [559, 479];
     const named = p ? yearsIn(p.textContent) : [];
     const ys = named.length ? named : span;
     when.hidden = !ys.length;

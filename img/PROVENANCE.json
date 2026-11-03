@@ -3438,6 +3438,34 @@
    "date": "2026-11-02T19:38:43+00:00",
    "source_sha256": "768c38080bc0209236f2bbddba10be5c5558d18d0ebf358fdf8de8deaf19c785"
   },
+  "img/topics/buildings/b_builders_yard_s0.webp": {
+   "game_file": "assets/generated/illustrations/topics/buildings/b_builders_yard_s0.jpg",
+   "source": "PharaohArt/topics/buildings/b_builders_yard_s0_t1.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-03T13:36:02+00:00",
+   "source_sha256": "6e48269ed9b255fe481e041af0752b4667089e3b34f009d49c940ad3ba0173e3"
+  },
+  "img/topics/buildings/b_builders_yard_s1.webp": {
+   "game_file": "assets/generated/illustrations/topics/buildings/b_builders_yard_s1.jpg",
+   "source": "PharaohArt/topics/buildings/b_builders_yard_s1_t1.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-03T13:36:22+00:00",
+   "source_sha256": "12dbd313d586260ae1aca48085e99440e40753b2e251beb3812d3d6e281c69ca"
+  },
+  "img/topics/buildings/b_builders_yard_s2.webp": {
+   "game_file": "assets/generated/illustrations/topics/buildings/b_builders_yard_s2.jpg",
+   "source": "PharaohArt/topics/buildings/b_builders_yard_s2_t1.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-03T13:36:24+00:00",
+   "source_sha256": "329fcb2cbc0d4f82b679e629b6b6e6bf7273bedbac5a985789010b21a50c4fee"
+  },
+  "img/topics/buildings/b_builders_yard_s3.webp": {
+   "game_file": "assets/generated/illustrations/topics/buildings/b_builders_yard_s3.jpg",
+   "source": "PharaohArt/topics/buildings/b_builders_yard_s3_t1.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-03T13:37:38+00:00",
+   "source_sha256": "e78b47f6c9e98c8eac6e66f9551618c4f2da42825bbb2b7516713bcd9922b37a"
+  },
   "img/topics/buildings/b_burial_ground_burial_mound_s0.webp": {
    "game_file": "assets/generated/illustrations/topics/buildings/b_burial_ground_burial_mound_s0.jpg",
    "source": "PharaohArt/topics/buildings/b_burial_ground_burial_mound_s0_t1.png (off-repo Codex archive)",
@@ -3815,6 +3843,41 @@
    "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
    "date": "2026-11-02T18:18:44+00:00",
    "source_sha256": "33dbc7b48f45285ad88890e5b4c6f54a9649187f0d76dc47e329ea4181684b14"
+  },
+  "img/topics/buildings/b_darius_statue_s0.webp": {
+   "game_file": "assets/generated/illustrations/topics/buildings/b_darius_statue_s0.jpg",
+   "source": "PharaohArt/topics/buildings/b_darius_statue_s0_t1.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-03T13:34:52+00:00",
+   "source_sha256": "dc6c77d9f9b29d2cec3130b803afba0e822384e2d854ed74d4e16a7cc68d4fda"
+  },
+  "img/topics/buildings/b_darius_statue_s1.webp": {
+   "game_file": "assets/generated/illustrations/topics/buildings/b_darius_statue_s1.jpg",
+   "source": "PharaohArt/topics/buildings/b_darius_statue_s1_t1.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-03T13:35:04+00:00",
+   "source_sha256": "654875f32d219feea19959a91352b8c8c175bda792180c60d13d8c810e27036e"
+  },
+  "img/topics/buildings/b_darius_statue_s2.webp": {
+   "game_file": "assets/generated/illustrations/topics/buildings/b_darius_statue_s2.jpg",
+   "source": "PharaohArt/topics/buildings/b_darius_statue_s2_t1.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-03T13:34:36+00:00",
+   "source_sha256": "4816b6b2e199783c9c363a3db3d80a91c410d1321da2697348f0719e89977d6d"
+  },
+  "img/topics/buildings/b_darius_statue_s3.webp": {
+   "game_file": "assets/generated/illustrations/topics/buildings/b_darius_statue_s3.jpg",
+   "source": "PharaohArt/topics/buildings/b_darius_statue_s3_t1.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-03T13:34:50+00:00",
+   "source_sha256": "0ef21cccceed49a2550236f05f17f13a0e44963b10093bd12d62a1ed98f7ba16"
+  },
+  "img/topics/buildings/b_darius_statue_s4.webp": {
+   "game_file": "assets/generated/illustrations/topics/buildings/b_darius_statue_s4.jpg",
+   "source": "PharaohArt/topics/buildings/b_darius_statue_s4_t1.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-03T13:34:58+00:00",
+   "source_sha256": "b074f4f80a24ed2ae26cd5b4477a00d0c4cff83e98c0633f39a9fa1359357535"
   },
   "img/topics/buildings/b_farm_s0.webp": {
    "game_file": "assets/generated/illustrations/topics/buildings/b_farm_s0.jpg",
