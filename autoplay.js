@@ -222,7 +222,8 @@
   // article's region (data-music; a battle's own music for a fight) and a bed by what it is about (data-sound: the
   // town's murmur, the wind, or now and then a sound of battle). Each fades in and out as the article changes.
   const EXT = opus ? '.ogg' : '.m4a';
-  const VOL = { music: 0.07, bed: 0.06, town: 0.025, shot: 0.05 };
+  // The music files sit near -21 LUFS and the town and wind beds near -13, so the beds play far lower.
+  const VOL = { music: 0.12, bed: 0.03, town: 0.02, shot: 0.05 };
   const CROWD = 6; // faces a painting shows (data-faces) for the town's murmur to play under it
   let crowd = false;
   let sounds = null;
