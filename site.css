@@ -175,6 +175,11 @@ html[dir="rtl"] button.narr, html[dir="rtl"] button.narr-toggle, html[lang="zh-C
 html[lang="zh-CN"] button.narr-toggle, html[lang="ja"] button.narr-toggle, html[lang="ko"] button.narr-toggle { letter-spacing: 0; }
 html[dir="rtl"] button.narr, html[dir="rtl"] button.narr-toggle { font-family: 'Vazirmatn', Tahoma, sans-serif; }
 html[dir="rtl"] button.narr { padding: 9px 14px 9px 18px; }
+/* The narrator on every paragraph: a small round button before the words */
+button.narr.mini { margin: 0 8px 0 0; padding: 0; width: 24px; height: 24px; border-radius: 50%; justify-content: center; vertical-align: -5px; font-size: 0; }
+button.narr.mini svg { width: 10px; height: 10px; }
+html[dir="rtl"] button.narr.mini { margin: 0 0 0 8px; padding: 0; }
+p.inplay button.narr.mini { vertical-align: -6px; }
 .founding { background: var(--panel); border: 1px solid var(--line); border-left: 3px solid var(--gold-dim); padding: 16px 22px 18px; margin: 4px 0 26px; }
 .founding p:not(.kicker) { font-size: 21px; font-style: italic; margin-top: 4px; }
 html[dir="rtl"] .founding { border-left: 1px solid var(--line); border-right: 3px solid var(--gold-dim); }

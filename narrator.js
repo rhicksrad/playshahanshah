@@ -10,7 +10,10 @@
   let off = false, current = null;
   try { off = localStorage.getItem(KEY) === 'off'; } catch (e) {}
 
-  const label = (b, s) => { b.querySelector('.l').textContent = s; };
+  const label = (b, s) => {
+    const l = b.querySelector('.l');
+    if (l) l.textContent = s; else { b.title = s; b.setAttribute('aria-label', s); }  // the small paragraph buttons
+  };
   const stop = () => {
     audio.pause();
     if (current) { current.classList.remove('on'); current.setAttribute('aria-pressed', 'false'); label(current, current.dataset.play); }
