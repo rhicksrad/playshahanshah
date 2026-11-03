@@ -224,7 +224,7 @@
   // town's murmur, the wind, or now and then a sound of battle). Each fades in and out as the article changes.
   const EXT = opus ? '.ogg' : '.m4a';
   // The music files sit near -21 LUFS and the town and wind beds near -13, so the beds play far lower.
-  const VOL = { music: 0.12, bed: 0.03, town: 0.02, battle: 0.12, shot: 0.1 };
+  const VOL = { music: 0.12, bed: 0.03, town: 0.02, battle: 0.12, shot: 0.1, scene: 0.06, cue: 0.08 };
   const CROWD = 6; // faces a painting shows (data-faces) for the town's murmur to play under it
   let crowd = false;
   let sounds = null;
@@ -290,9 +290,30 @@
     const m = sounds.music[main.dataset.music || 'city'];
     channel('music', m ? m.src : '', VOL.music);
     const town = main.dataset.sound === 'town';
+    scene();
     if (fighting()) channel('bed', sounds.beds.battle || '', VOL.battle);
     else channel('bed', town && !crowd ? '' : sounds.beds[main.dataset.sound] || '', town ? VOL.town : VOL.bed);
     shots();
+  };
+  // What the paragraph shows, heard under it (data-cue, from its English: build.py's CUES): its first loop all
+  // through (rain, fire, water, a feast, wind), and now and then one of its other sounds (thunder, animals,
+  // building, stone, birds, a scribe, a collapse, a horn).
+  let cueTimer = 0;
+  const scene = () => {
+    clearTimeout(cueTimer);
+    const el = steps[at];
+    const cues = (el && el.dataset.cue || '').split(',').filter(c => sounds.fx && sounds.fx[c]);
+    const loop = cues.find(c => sounds.fx[c].loop);
+    channel('scene', loop ? sounds.fx[loop].src : '', VOL.scene);
+    const once = cues.filter(c => !sounds.fx[c].loop);
+    if (!once.length || paused) return;
+    const play = () => {
+      if (!running || paused || steps[at] !== el) return;
+      const c = once[Math.floor(Math.random() * once.length)];
+      leveled(BASE + sounds.fx[c].src + EXT, VOL.cue * (0.6 + Math.random() * 0.4)).play().catch(() => {});
+      cueTimer = setTimeout(play, 6000 + Math.random() * 6000);
+    };
+    cueTimer = setTimeout(play, 1200 + Math.random() * 1500);
   };
   // A battle: the whole article (data-sound="battle"), or the section being read tells of fighting (data-fight).
   const fighting = () => main.dataset.sound === 'battle'
@@ -305,11 +326,14 @@
   const hush = on => {
     for (const b of Object.values(beds)) {
       if (on) b.audio.pause();
-      else b.audio.play().then(() => { if (level(b.audio) < 0.01) fadeTo(b.audio, b.src.includes('/music/') ? VOL.music : b.src.includes('/town') ? VOL.town : b.src.includes('/battle') ? VOL.battle : VOL.bed, 2500); }).catch(() => {});
+      else b.audio.play().then(() => { if (level(b.audio) < 0.01) fadeTo(b.audio, b.src.includes('/music/') ? VOL.music : b.src.includes('/town') ? VOL.town : b.src.includes('/battle') ? VOL.battle : b.src.includes('/fx/') ? VOL.scene : VOL.bed, 2500); }).catch(() => {});
     }
-    if (on) clearTimeout(shotTimer); else shots();
+    if (on) { clearTimeout(shotTimer); clearTimeout(cueTimer); } else { shots(); if (sounds) scene(); }
   };
-  const silence = () => { channel('music', '', 0); channel('bed', '', 0); clearTimeout(shotTimer); };
+  const silence = () => {
+    channel('music', '', 0); channel('bed', '', 0); channel('scene', '', 0);
+    clearTimeout(shotTimer); clearTimeout(cueTimer);
+  };
   // The music's credit, as its licence asks, under full screen's words.
   function credit() {
     const b = beds.music, m = sounds && sounds.music[main.dataset.music || 'city'];

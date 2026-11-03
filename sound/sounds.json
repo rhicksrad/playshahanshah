@@ -198,5 +198,87 @@
   "sound/shots/arrow_hit_wood",
   "sound/shots/charge_yell2",
   "sound/shots/charge_yell5"
- ]
+ ],
+ "fx": {
+  "rain": {
+   "src": "sound/fx/rain",
+   "loop": true
+  },
+  "fire": {
+   "src": "sound/fx/fire",
+   "loop": true
+  },
+  "water": {
+   "src": "sound/fx/water",
+   "loop": true
+  },
+  "feast": {
+   "src": "sound/fx/feast",
+   "loop": true
+  },
+  "wind": {
+   "src": "sound/fx/wind",
+   "loop": true
+  },
+  "thunder": {
+   "src": "sound/fx/thunder",
+   "loop": false
+  },
+  "camels": {
+   "src": "sound/fx/camels",
+   "loop": false
+  },
+  "cattle": {
+   "src": "sound/fx/cattle",
+   "loop": false
+  },
+  "sheep": {
+   "src": "sound/fx/sheep",
+   "loop": false
+  },
+  "goats": {
+   "src": "sound/fx/goats",
+   "loop": false
+  },
+  "donkeys": {
+   "src": "sound/fx/donkeys",
+   "loop": false
+  },
+  "cart": {
+   "src": "sound/fx/cart",
+   "loop": false
+  },
+  "building": {
+   "src": "sound/fx/building",
+   "loop": false
+  },
+  "stone": {
+   "src": "sound/fx/stone",
+   "loop": false
+  },
+  "marsh": {
+   "src": "sound/fx/marsh",
+   "loop": false
+  },
+  "crows": {
+   "src": "sound/fx/crows",
+   "loop": false
+  },
+  "night": {
+   "src": "sound/fx/night",
+   "loop": false
+  },
+  "writing": {
+   "src": "sound/fx/writing",
+   "loop": false
+  },
+  "collapse": {
+   "src": "sound/fx/collapse",
+   "loop": false
+  },
+  "horn": {
+   "src": "sound/fx/horn",
+   "loop": false
+  }
+ }
 }
