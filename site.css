@@ -263,5 +263,8 @@ nav.top .links { flex-wrap: wrap; row-gap: 6px; }
   .lightbox .x { padding: 6px 10px; }
 }
 /* Full screen on a phone: more room for the words in portrait and on a short landscape screen */
-@media (orientation: portrait) and (max-width: 760px) { .cinema .words { max-height: 45vh; padding: 14px 20px 18px; } }
-@media (max-height: 500px) { .cinema .words { max-height: 40vh; padding: 10px 24px 12px; } .cinema .said { font-size: 17px; } }
+/* The words' box keeps one height from paragraph to paragraph, so the painting above never jumps */
+.cinema .words { height: clamp(180px, 27vh, 320px); max-height: none; overflow-y: auto; scrollbar-width: none; }
+.cinema .words::-webkit-scrollbar { display: none; }
+@media (orientation: portrait) and (max-width: 760px) { .cinema .words { height: 45vh; max-height: none; padding: 14px 20px 18px; } }
+@media (max-height: 500px) { .cinema .words { height: 40vh; max-height: none; padding: 10px 24px 12px; } .cinema .said { font-size: 17px; } }
