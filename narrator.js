@@ -6,7 +6,13 @@
   audio.preload = 'none';
   const buttons = [...document.querySelectorAll('button.narr')];
   const toggle = document.querySelector('button.narr-toggle');
-  if (!buttons.length || !audio.canPlayType('audio/ogg; codecs=opus')) return;
+  const opus = audio.canPlayType('audio/ogg; codecs=opus') !== '';
+  // Safari without Ogg Opus plays each clip's AAC copy: a paragraph's beside its .ogg, a narrator clip's in its
+  // language's voice repo under narrator/ (the site has no room for them).
+  const aac = !opus && audio.canPlayType('audio/mp4; codecs="mp4a.40.2"') !== '';
+  const clip = u => !aac ? u : u.replace(/^(?:\.\.\/)*audio\/([^/]+)\/([^/]+)\.ogg$/, (m, loc, key) =>
+    `https://rhicksrad.github.io/shahanshah-voice-${loc.toLowerCase().replace('_', '-')}/narrator/${key}.ogg`).replace(/\.ogg$/, '.m4a');
+  if (!buttons.length || !(opus || aac)) return;
   let off = false, current = null;
   try { off = localStorage.getItem(KEY) === 'off'; } catch (e) {}
 
@@ -28,7 +34,7 @@
       const again = current === b;
       stop();
       if (again || off) return;
-      audio.src = b.dataset.src;
+      audio.src = clip(b.dataset.src);
       current = b;
       b.classList.add('on');
       b.setAttribute('aria-pressed', 'true');

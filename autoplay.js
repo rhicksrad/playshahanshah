@@ -25,6 +25,11 @@
   collect();
   const audio = new Audio();
   const opus = audio.canPlayType('audio/ogg; codecs=opus') !== '';
+  // Safari without Ogg Opus plays each clip's AAC copy: a paragraph's beside its .ogg, a narrator clip's in its
+  // language's voice repo under narrator/ (the site has no room for them).
+  const aac = !opus && audio.canPlayType('audio/mp4; codecs="mp4a.40.2"') !== '';
+  const clip = u => !aac ? u : u.replace(/^(?:\.\.\/)*audio\/([^/]+)\/([^/]+)\.ogg$/, (m, loc, key) =>
+    `https://rhicksrad.github.io/shahanshah-voice-${loc.toLowerCase().replace('_', '-')}/narrator/${key}.ogg`).replace(/\.ogg$/, '.m4a');
   const silent = () => { try { return localStorage.getItem('shahanshah-narrator') === 'off'; } catch (e) { return false; } };
   let at = -1, timer = 0, left = 0, since = 0, running = false, paused = false, reading = null;
   let pic = null, drift = 0, cinema = false;
@@ -211,8 +216,8 @@
     if (at >= steps.length) return nextArticle();
     const el = steps[at];
     show(el);
-    if (el.tagName === 'BUTTON' && opus && !silent()) {
-      audio.src = el.dataset.src;
+    if (el.tagName === 'BUTTON' && (opus || aac) && !silent()) {
+      audio.src = clip(el.dataset.src);
       audio.play().catch(blocked);
     } else {
       wait(dwell(reading));
