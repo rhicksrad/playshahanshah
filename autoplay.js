@@ -24,7 +24,7 @@
   let at = -1, timer = 0, left = 0, since = 0, running = false, paused = false, reading = null;
   let pic = null, drift = 0, driftEnd = 0;
   // The pans: where the zoom is anchored, and the way it drifts (percent of the picture).
-  const PANS = [['30% 40%', 2, 1], ['70% 35%', -2, 1], ['50% 70%', 0, -2], ['40% 50%', 1.5, 0], ['60% 55%', -1.5, -1]];
+  const PANS = [['30% 40%', 3, 1.5], ['70% 35%', -3, 1.5], ['50% 70%', 0, -3], ['40% 50%', 2.5, 0], ['60% 55%', -2.5, -1.5]];
 
   const icon = d => `<svg viewBox="0 0 16 16" aria-hidden="true"><path d="${d}"/></svg>`;
   const bar = document.createElement('div');
@@ -61,7 +61,7 @@
     img.style.transition = 'none';
     img.style.transform = now === 'none' ? 'scale(1)' : now;
     void img.offsetWidth;
-    const z = again ? 1.2 : 1.12, k = again ? 1.6 : 1;
+    const z = again ? 1.3 : 1.18, k = again ? 1.6 : 1;
     img.style.transition = `transform ${Math.max(1000, ms)}ms linear`;
     img.style.transform = `scale(${z}) translate(${x * k}%, ${y * k}%)`;
     driftEnd = Date.now() + ms;
