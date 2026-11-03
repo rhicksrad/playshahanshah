@@ -196,3 +196,21 @@ img.zoomable { cursor: zoom-in; }
   font-size: 34px; line-height: 1; cursor: pointer; }
 html[dir="rtl"] .lightbox .x { right: auto; left: 16px; }
 html.lb-open { overflow: hidden; }
+/* Autoplay (autoplay.js): the button in the crumb or the index head, a control bar, the paragraph being read */
+button.autoplay, .ap-bar button { font-family: 'Cinzel', Georgia, serif; letter-spacing: .03em; }
+html[dir="rtl"] button.autoplay, html[dir="rtl"] .ap-bar button { font-family: 'Vazirmatn', Tahoma, sans-serif; letter-spacing: 0; }
+button.autoplay { display: inline-flex; align-items: center; gap: 6px; margin-inline-start: 14px; cursor: pointer; font-size: 13px;
+  color: var(--gold); background: transparent; border: 1px solid var(--gold-dim); padding: 3px 10px; vertical-align: 1px; }
+button.autoplay:hover { color: var(--bg); background: var(--gold); }
+button.autoplay svg { width: 14px; height: 14px; fill: currentColor; }
+button.autoplay[hidden] { display: none; }
+.ix-head button.autoplay { margin: 6px 0 14px; font-size: 16px; padding: 8px 16px; }
+.ap-bar { position: fixed; bottom: 16px; left: 50%; transform: translateX(-50%); z-index: 90; display: flex; gap: 8px;
+  background: var(--panel); border: 1px solid var(--gold-dim); padding: 8px; box-shadow: 0 6px 24px rgba(0, 0, 0, .5); }
+.ap-bar[hidden] { display: none; }
+.ap-bar button { display: inline-flex; align-items: center; gap: 6px; cursor: pointer; font-size: 14px; color: var(--cream);
+  background: transparent; border: 1px solid var(--line); padding: 6px 12px; }
+.ap-bar button:hover, .ap-bar button.hot { color: var(--bg); background: var(--gold); border-color: var(--gold); }
+.ap-bar svg { width: 14px; height: 14px; fill: currentColor; }
+p.reading { background: rgba(214, 170, 82, .10); box-shadow: -6px 0 0 rgba(214, 170, 82, .10), 6px 0 0 rgba(214, 170, 82, .10); transition: background .4s; }
+@media (max-width: 560px) { .ap-bar span { display: none; } }
