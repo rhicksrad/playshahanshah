@@ -11,7 +11,7 @@
   // language's voice repo under narrator/ (the site has no room for them).
   const aac = !opus && audio.canPlayType('audio/mp4; codecs="mp4a.40.2"') !== '';
   const clip = u => !aac ? u : u.replace(/^(?:\.\.\/)*audio\/([^/]+)\/([^/]+)\.ogg$/, (m, loc, key) =>
-    `https://rhicksrad.github.io/shahanshah-voice-${loc.toLowerCase().replace('_', '-')}/narrator/${key}.ogg`).replace(/\.ogg$/, '.m4a');
+    `https://audio.reformatgames.com/shahanshah-voice-${loc.toLowerCase().replace('_', '-')}/narrator/${key}.ogg`).replace(/\.ogg$/, '.m4a');
   if (!buttons.length || !(opus || aac)) return;
   let off = false, current = null;
   try { off = localStorage.getItem(KEY) === 'off'; } catch (e) {}

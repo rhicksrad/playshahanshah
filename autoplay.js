@@ -30,7 +30,7 @@
   // language's voice repo under narrator/ (the site has no room for them).
   const aac = !opus && audio.canPlayType('audio/mp4; codecs="mp4a.40.2"') !== '';
   const clip = u => !aac ? u : u.replace(/^(?:\.\.\/)*audio\/([^/]+)\/([^/]+)\.ogg$/, (m, loc, key) =>
-    `https://rhicksrad.github.io/shahanshah-voice-${loc.toLowerCase().replace('_', '-')}/narrator/${key}.ogg`).replace(/\.ogg$/, '.m4a');
+    `https://audio.reformatgames.com/shahanshah-voice-${loc.toLowerCase().replace('_', '-')}/narrator/${key}.ogg`).replace(/\.ogg$/, '.m4a');
   const silent = () => { try { return localStorage.getItem('shahanshah-narrator') === 'off'; } catch (e) { return false; } };
   let at = -1, timer = 0, left = 0, since = 0, running = false, paused = false, reading = null;
   let pic = null, drift = 0, cinema = false;
@@ -342,9 +342,9 @@
     channel('music', '', 0); channel('bed', '', 0); channel('scene', '', 0);
     clearTimeout(shotTimer); clearTimeout(cueTimer);
   };
-  // The game's whole soundtrack, from the title's theme on, one track after another (rhicksrad/shahanshah-music,
+  // The game's whole soundtrack, from the title's theme on, one track after another (the shahanshah-music repo,
   // tools/website/music_playlist.py). Where it had got to is kept for this tab, so the next page carries on.
-  const MUSIC_BASE = 'https://rhicksrad.github.io/shahanshah-music/';
+  const MUSIC_BASE = 'https://audio.reformatgames.com/shahanshah-music/';
   const SAVE = 'shahanshah-music';
   let playlist = null, track = 0, resumeAt = 0, saved = 0;
   const listing = fetch(MUSIC_BASE + 'playlist.json').then(r => r.json()).then(d => { playlist = d; }).catch(() => {});
