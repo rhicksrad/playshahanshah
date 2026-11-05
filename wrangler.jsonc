@@ -1,0 +1,7 @@
+{
+  // playshahanshah.com on Cloudflare: `npx wrangler deploy` from a clone of this repo, after pushing.
+  "name": "playshahanshah",
+  "compatibility_date": "2026-10-01",
+  "main": "worker.js",
+  "assets": { "directory": ".", "binding": "ASSETS", "run_worker_first": ["/*.html"] }
+}

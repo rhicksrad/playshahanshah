@@ -1,0 +1,7 @@
+.git
+.gitignore
+.assetsignore
+.nojekyll
+CNAME
+wrangler.jsonc
+worker.js
