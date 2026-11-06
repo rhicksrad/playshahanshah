@@ -1,13 +1,14 @@
 :root {
-  --bg: #16110b;
-  --panel: #211910;
-  --panel2: #2a2014;
+  /* Neutral stone, never flat brown: every surface below is the game's painted art (docs/UI_BOXES.md). */
+  --bg: #0e0e0f;
+  --panel: #161617;
+  --panel2: #1c1c1d;
   --cream: #ecdfc4;
   --dim: #b6a483;
   --gold: #d2a94e;
   --gold-dim: #9c7a35;
   --lapis: #3d5fae;
-  --line: #3a2d1b;
+  --line: #4a4134;
   --record: #6f9a5a;
   --account: #4f78c4;
   --disputed: #c08a2e;
@@ -24,7 +25,7 @@ h1 { font-weight: 700; line-height: 1.15; letter-spacing: .01em; }
 h2 { font-weight: 500; line-height: 1.25; }
 
 nav.top { position: sticky; top: 0; z-index: 50; display: flex; align-items: center; gap: 20px; padding: 12px 24px;
-  background: rgba(22,17,11,.94); border-bottom: 1px solid var(--line); backdrop-filter: blur(6px); }
+  background: rgba(12,12,13,.94); border-bottom: 1px solid var(--line); backdrop-filter: blur(6px); }
 nav.top .brand { color: var(--cream); font-weight: 700; letter-spacing: .14em; font-size: 18px; }
 nav.top .links { margin-left: auto; display: flex; align-items: center; gap: 22px; font-size: 14px; letter-spacing: .06em; }
 nav.top .links a { color: var(--dim); }
@@ -44,7 +45,7 @@ nav.top .links a.cta { color: var(--bg); background: var(--gold); padding: 6px 1
 .hero { position: relative; max-width: 1280px; margin: 0 auto; }
 .hero img { width: 100%; aspect-ratio: 16/9; object-fit: cover; }
 .hero .cap { position: absolute; left: 0; right: 0; bottom: 0; padding: 60px 28px 22px;
-  background: linear-gradient(180deg, transparent, rgba(22,17,11,.92)); }
+  background: linear-gradient(180deg, transparent, rgba(12,12,13,.92)); }
 .hero h1 { font-size: clamp(32px, 5vw, 56px); }
 .hero .caption { color: var(--dim); font-style: italic; }
 @media (max-width: 700px) { .hero .cap { position: static; padding: 14px 20px 0; background: none; } }
@@ -96,7 +97,7 @@ nav.top .links a.cta { color: var(--bg); background: var(--gold); padding: 6px 1
 
 /* Home */
 .home-hero { position: relative; min-height: 78vh; display: flex; align-items: flex-end; background-size: cover; background-position: center; }
-.home-hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(22,17,11,.1) 30%, rgba(22,17,11,.95)); }
+.home-hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(12,12,13,.1) 30%, rgba(12,12,13,.95)); }
 .home-hero .inner { position: relative; max-width: 1180px; margin: 0 auto; padding: 40px 24px 50px; width: 100%; }
 .home-hero h1 { font-size: clamp(46px, 9vw, 110px); letter-spacing: .08em; text-shadow: 0 2px 20px rgba(0,0,0,.6); }
 .home-hero .tagline { font-size: clamp(19px, 2.4vw, 25px); max-width: 720px; margin: 8px 0 22px; text-shadow: 0 1px 10px rgba(0,0,0,.7); }
@@ -222,7 +223,7 @@ p.reading { background: rgba(214, 170, 82, .10); box-shadow: -6px 0 0 rgba(214, 
 .cinema[hidden] { display: none; }
 .cinema .art { flex: 1; min-height: 0; overflow: hidden; }
 .cinema .art img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.cinema .words { flex: 0 0 auto; max-height: 30vh; overflow: auto; background: rgba(22, 17, 11, .96);
+.cinema .words { flex: 0 0 auto; max-height: 30vh; overflow: auto; background: rgba(12, 12, 13, .96);
   border-top: 1px solid var(--gold-dim); padding: 16px max(24px, 8vw) 20px; }
 .cinema .where { margin: 0 0 6px; font-family: 'Cinzel', Georgia, serif; font-size: 14px; letter-spacing: .08em; color: var(--gold); text-transform: uppercase; }
 .cinema .said { margin: 0; font-size: clamp(18px, 2.1vw, 26px); line-height: 1.5; color: var(--cream); max-width: 1100px; }
@@ -271,3 +272,45 @@ nav.top .links { flex-wrap: wrap; row-gap: 6px; }
 /* Full screen's music credit (autoplay.js), as the tracks' licences ask */
 .cinema .words { position: relative; }
 .cinema .credit { position: absolute; right: max(24px, 8vw); bottom: 6px; margin: 0; font-size: 11px; color: var(--dim); max-width: 60%; text-align: right; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+/* Painted surfaces: the game's own interface art (Pharaoh assets/generated/ui/painted, UiTheme.PAINTED),
+   at 2 texels a CSS pixel as in the game. Frames are nine-patches with an open centre; fields tile. */
+body { background: var(--bg) url(img/ui/field_limestone.webp) repeat; background-size: 512px; }
+nav.top { background: rgba(12,12,13,.9) url(img/ui/field_limestone.webp) repeat; background-size: 512px;
+  border-bottom: 0; border-image: url(img/ui/frame_topbar.png) 12 fill / 0 0 6px 0 / 0 round; }
+nav.top .links a.cta, .button { background: url(img/ui/field_bronze.webp) repeat; background-size: 256px; color: var(--cream);
+  border: 6px solid transparent; border-image: url(img/ui/frame_button.png) 12 / 6px round; border-radius: 0;
+  text-shadow: 0 1px 2px rgba(0,0,0,.8); }
+.button { padding: 6px 16px; }
+nav.top .links a.cta { padding: 2px 10px; }
+.button:hover, nav.top .links a.cta:hover { background: url(img/ui/field_bronze.webp) repeat; background-size: 256px;
+  filter: brightness(1.25); text-decoration: none; }
+.button.ghost { background: url(img/ui/field_ebony.webp) repeat; background-size: 256px; color: var(--gold);
+  border: 6px solid transparent; border-image: url(img/ui/frame_button.png) 12 / 6px round; }
+.card { background: url(img/ui/field_ebony.webp) repeat; background-size: 256px; border: 6px solid transparent;
+  border-image: url(img/ui/frame_card.png) 12 / 6px round; border-radius: 0; }
+.card:hover { border-image: url(img/ui/frame_card_hot.png) 10 / 6px round; }
+.card img, .card .noimg { background: var(--panel2); }
+.pillars div, .play, .founding { background: url(img/ui/plate_console.webp) center / 768px auto repeat; border: 16px solid transparent;
+  border-image: url(img/ui/frame_console.png) 32 / 16px round; border-radius: 0; }
+.play { padding: 10px 14px; } .pillars div { padding: 6px 10px; } .founding { padding: 8px 14px 10px; }
+.col { background: url(img/ui/plate_encyclopedia.webp) top center / 768px auto repeat; border: 20px solid transparent;
+  border-image: url(img/ui/frame_encyclopedia.png) 40 / 20px round; margin-top: 24px; margin-bottom: 24px; }
+.index { background: url(img/ui/plate_encyclopedia.webp) top center / 768px auto repeat; border: 20px solid transparent;
+  border-image: url(img/ui/frame_encyclopedia.png) 40 / 20px round; margin-top: 24px; margin-bottom: 24px; }
+#q { border: 8px solid transparent; border-image: url(img/ui/frame_inset.png) 16 / 8px round;
+  border-radius: 0; }
+#q { background: url(img/ui/field_limestone.webp) repeat; background-size: 512px; padding: 6px 10px; }
+.ap-bar, .cinema .words { background: rgba(12,12,13,.94) url(img/ui/field_limestone.webp) repeat; background-size: 512px; }
+button.narr, button.narr-toggle, button.autoplay, .ap-bar button { background: url(img/ui/field_bronze.webp) repeat; background-size: 256px;
+  border: 6px solid transparent; border-image: url(img/ui/frame_button.png) 12 / 6px round; border-radius: 0; }
+button.narr { color: var(--cream); padding: 3px 12px 3px 8px; }
+button.narr-toggle { padding: 0 8px; }
+button.autoplay { padding: 0 8px; }
+button.narr:hover, button.narr.on, button.autoplay:hover, .ap-bar button:hover, .ap-bar button.hot {
+  background: url(img/ui/field_bronze.webp) repeat; background-size: 256px; filter: brightness(1.3); color: var(--gold);
+  border-image: url(img/ui/frame_tab_on.png) 12 / 6px round; }
+.ap-bar { border: 16px solid transparent; border-image: url(img/ui/frame_console.png) 32 / 16px round; padding: 0; }
+.lightbox .x, .cinema .x { text-shadow: 0 1px 3px #000; }
+nav.top .links a.cta, nav.top button.narr-toggle { border-width: 4px; border-image-width: 4px; padding: 1px 8px; }
+@media (max-width: 640px) { .col, .index { border-width: 10px; border-image-width: 10px; margin-top: 12px; margin-bottom: 12px; } }
