@@ -314,3 +314,26 @@ button.narr:hover, button.narr.on, button.autoplay:hover, .ap-bar button:hover, 
 .lightbox .x, .cinema .x { text-shadow: 0 1px 3px #000; }
 nav.top .links a.cta, nav.top button.narr-toggle { border-width: 4px; border-image-width: 4px; padding: 1px 8px; }
 @media (max-width: 640px) { .col, .index { border-width: 10px; border-image-width: 10px; margin-top: 12px; margin-bottom: 12px; } }
+
+/* A phone on its side (iPhone landscape): a strip under the words would crop the 16:9 painting to a band
+   through its middle. There the painting fills the left of the screen whole (a portrait one too), and the
+   words take a column beside it. The dynamic viewport and the notch's safe areas keep it clear of Safari's bars. */
+@media (orientation: landscape) and (max-height: 500px) {
+  .cinema { flex-direction: row; height: 100dvh; padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left); }
+  .cinema .art { flex: 1 1 auto; min-width: 0; }
+  .cinema .art img { object-fit: contain; }
+  .cinema .words { flex: 0 0 clamp(240px, 32vw, 320px); height: auto; flex-direction: column; gap: 6px; border-top: 0;
+    border-left: 1px solid var(--gold-dim); padding: 12px 16px 22px; }
+  .cinema .text { flex: 0 1 auto; }
+  .cinema .when { flex-basis: auto; width: 100%; margin-top: auto; }
+  .cinema .axis { margin-top: 8px; }
+  .cinema .said { font-size: 15px; }
+  .cinema .credit { left: 16px; right: 16px; max-width: none; }
+  html[dir="rtl"] .cinema .words { border-left: 0; border-right: 1px solid var(--gold-dim); }
+}
+/* A painting full screen: the visible screen's height, not the tallest Safari could ever give, so the
+   caption and the painting's foot never slip under the toolbar */
+.lightbox { height: 100dvh; padding: max(16px, env(safe-area-inset-top)) max(16px, env(safe-area-inset-right))
+  max(16px, env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left)); }
+.lightbox img { max-height: calc(100dvh - 80px); min-height: 0; }
+@media (max-height: 500px) { .lightbox img { max-height: calc(100dvh - 56px); } .lightbox .cap { margin-top: 6px; font-size: 13px; } }
