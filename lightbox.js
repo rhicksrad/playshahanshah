@@ -1,5 +1,6 @@
 // Any painting opens full screen on a click: Esc, a click or the close button shuts it, and the arrow keys
 // step through the page's paintings, as a swipe does on a phone. The card thumbnails stay links to their pages.
+// A picture with a larger copy (data-full) opens that one.
 (() => {
   const pics = [...document.querySelectorAll('img')].filter(i => !i.closest('a.card') && !i.closest('nav'));
   if (!pics.length) return;
@@ -21,7 +22,7 @@
   const show = n => {
     at = (n + pics.length) % pics.length;
     const i = pics[at];
-    big.src = i.currentSrc || i.src;
+    big.src = i.dataset.full || i.currentSrc || i.src;
     big.alt = i.alt;
     cap.textContent = caption(i);
     box.hidden = false;

@@ -337,3 +337,15 @@ nav.top .links a.cta, nav.top button.narr-toggle { border-width: 4px; border-ima
   max(16px, env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left)); }
 .lightbox img { max-height: calc(100dvh - 80px); min-height: 0; }
 @media (max-height: 500px) { .lightbox img { max-height: calc(100dvh - 56px); } .lightbox .cap { margin-top: 6px; font-size: 13px; } }
+
+/* The home page's news: clips in justified rows, each at its own shape, and the nations with their flags. */
+.clips { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 12px; }
+.clips figure { margin: 0; flex: var(--r) 1 calc(var(--r) * 200px); min-width: 0; }
+.clips video { display: block; width: 100%; height: auto; aspect-ratio: var(--r); object-fit: cover; background: #000; border: 1px solid var(--line); border-radius: 3px; }
+.clips figcaption { color: var(--dim); font-size: 15px; margin-top: 4px; }
+.clips.strip figure { flex: 1 1 100%; }
+@media (max-width: 480px) { .clips figure { flex-basis: calc(var(--r) * 130px); } }
+.nations { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px 14px; }
+.nation { display: flex; align-items: center; gap: 10px; font-size: 17px; min-width: 0; }
+.nation img { width: 44px; height: 44px; flex: none; border: 1px solid var(--line); border-radius: 3px; }
+@media (max-width: 420px) { .nations { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
