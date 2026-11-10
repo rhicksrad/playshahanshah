@@ -15,76 +15,6 @@
    "date": "2026-10-31T17:22:17+00:00",
    "source_sha256": "fb9510525c9b916284da66137a5cb1427cb6a502796ef36395ca17d15fb099ee"
   },
-  "img/assets/marketing/store_screenshots/01_pasargadae_court_quarter.webp": {
-   "game_file": "assets/marketing/store_screenshots/01_pasargadae_court_quarter.jpg",
-   "source": "assets/marketing/store_screenshots/01_pasargadae_court_quarter.jpg",
-   "generator": "",
-   "date": "",
-   "source_sha256": ""
-  },
-  "img/assets/marketing/store_screenshots/02_pelusium_battle.webp": {
-   "game_file": "assets/marketing/store_screenshots/02_pelusium_battle.jpg",
-   "source": "assets/marketing/store_screenshots/02_pelusium_battle.jpg",
-   "generator": "",
-   "date": "",
-   "source_sha256": ""
-  },
-  "img/assets/marketing/store_screenshots/03_memphis_citizens_and_carriers.webp": {
-   "game_file": "assets/marketing/store_screenshots/03_memphis_citizens_and_carriers.jpg",
-   "source": "assets/marketing/store_screenshots/03_memphis_citizens_and_carriers.jpg",
-   "generator": "",
-   "date": "",
-   "source_sha256": ""
-  },
-  "img/assets/marketing/store_screenshots/04_susa_act_two_painting_ui.webp": {
-   "game_file": "assets/marketing/store_screenshots/04_susa_act_two_painting_ui.jpg",
-   "source": "assets/marketing/store_screenshots/04_susa_act_two_painting_ui.jpg",
-   "generator": "",
-   "date": "",
-   "source_sha256": ""
-  },
-  "img/assets/marketing/store_screenshots/05_night_city.webp": {
-   "game_file": "assets/marketing/store_screenshots/05_night_city.jpg",
-   "source": "assets/marketing/store_screenshots/05_night_city.jpg",
-   "generator": "",
-   "date": "",
-   "source_sha256": ""
-  },
-  "img/assets/marketing/store_screenshots/06_night_war_fires.webp": {
-   "game_file": "assets/marketing/store_screenshots/06_night_war_fires.jpg",
-   "source": "assets/marketing/store_screenshots/06_night_war_fires.jpg",
-   "generator": "",
-   "date": "",
-   "source_sha256": ""
-  },
-  "img/assets/marketing/store_screenshots/07_thermopylae_shield_wall.webp": {
-   "game_file": "assets/marketing/store_screenshots/07_thermopylae_shield_wall.jpg",
-   "source": "assets/marketing/store_screenshots/07_thermopylae_shield_wall.jpg",
-   "generator": "",
-   "date": "",
-   "source_sha256": ""
-  },
-  "img/assets/marketing/store_screenshots/08_salamis_fleets.webp": {
-   "game_file": "assets/marketing/store_screenshots/08_salamis_fleets.jpg",
-   "source": "assets/marketing/store_screenshots/08_salamis_fleets.jpg",
-   "generator": "",
-   "date": "",
-   "source_sha256": ""
-  },
-  "img/assets/marketing/store_screenshots/09_salamis_sea_orders_ui.webp": {
-   "game_file": "assets/marketing/store_screenshots/09_salamis_sea_orders_ui.jpg",
-   "source": "assets/marketing/store_screenshots/09_salamis_sea_orders_ui.jpg",
-   "generator": "",
-   "date": "",
-   "source_sha256": ""
-  },
-  "img/assets/marketing/store_screenshots/10_encyclopedia_memphis_ui.webp": {
-   "game_file": "assets/marketing/store_screenshots/10_encyclopedia_memphis_ui.jpg",
-   "source": "assets/marketing/store_screenshots/10_encyclopedia_memphis_ui.jpg",
-   "generator": "",
-   "date": "",
-   "source_sha256": ""
-  },
   "img/battlefields/map_artemisium.webp": {
    "game_file": "assets/generated/illustrations/battlefields/map_artemisium.jpg",
    "source": "PharaohArt/battlefields/map_artemisium_t1.png (off-repo Codex archive)",
@@ -358,6 +288,20 @@
    "date": "2026-10-26T02:48:12+00:00",
    "source_sha256": "e6950d1b795e9be35c0ba642c2648fa992b2f0bab41184a31d7eb89f42a1e0fa"
   },
+  "img/buildings/local_shrine.webp": {
+   "game_file": "assets/generated/illustrations/buildings/local_shrine.jpg",
+   "source": "PharaohArt/religion/local_shrine_t1.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:31:33+00:00",
+   "source_sha256": "f7cd0b87c8e31fd2e3ccc2245622e868ccf2c4900f885d9f2cd5d2e5799c1e4c"
+  },
+  "img/buildings/magi_altar.webp": {
+   "game_file": "assets/generated/illustrations/buildings/magi_altar.jpg",
+   "source": "PharaohArt/religion/magi_altar_t1.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:31:47+00:00",
+   "source_sha256": "fcfcd64caa49b2bc318e4b7f3ff7f10c7c770f83aaa8c2151c937024c214daf0"
+  },
   "img/buildings/magi_lodge.webp": {
    "game_file": "assets/generated/illustrations/buildings/magi_lodge.jpg",
    "source": "PharaohArt/building_plates/magi_lodge_t2.png (off-repo Codex archive)",
@@ -505,6 +449,13 @@
    "date": "2026-10-26T02:43:16+00:00",
    "source_sha256": "5c3918c1036d660500463ae85318daf760f26d1c3f5f1038ce1dddf5dc761968"
   },
+  "img/buildings/scribal_school.webp": {
+   "game_file": "assets/generated/illustrations/buildings/scribal_school.jpg",
+   "source": "PharaohArt/education_plates/scribal_school_t1.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:12:37+00:00",
+   "source_sha256": "34c731247ca110677c293eb59dd980263023c3e143c17bba0668ae3feb572f7d"
+  },
   "img/buildings/ship_camp.webp": {
    "game_file": "assets/generated/illustrations/buildings/ship_camp.jpg",
    "source": "PharaohArt/building_plates/ship_camp_t1.png (off-repo Codex archive)",
@@ -553,6 +504,13 @@
    "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
    "date": "2026-11-04T16:28:13+00:00",
    "source_sha256": "81f1fb4fe575bf1d36d7b30de0c3b2f3cb1aac0e888f25a9790048bbc918f749"
+  },
+  "img/buildings/training_ground.webp": {
+   "game_file": "assets/generated/illustrations/buildings/training_ground.jpg",
+   "source": "PharaohArt/education_plates/training_ground_t1.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:12:41+00:00",
+   "source_sha256": "2ff58803167685aac1fbdd0c347d5790ff788e56219587efa6aa4d0bf1817d3d"
   },
   "img/buildings/vineyard.webp": {
    "game_file": "assets/generated/illustrations/buildings/vineyard.jpg",
@@ -1240,6 +1198,27 @@
    "date": "2026-10-29T23:38:12+00:00",
    "source_sha256": "cf7a3898053e0209d04cf82aa9a41a9a32ad3ad0da6a187514ff76590137179a"
   },
+  "img/feasts/midwinter_fires.webp": {
+   "game_file": "assets/generated/illustrations/feasts/midwinter_fires.jpg",
+   "source": "PharaohArt/religion/feast_midwinter_fires_t1.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:28:30+00:00",
+   "source_sha256": "b51f2625a757d2264be812961b9744ce2446c678a54ce3e980dd1efece24daeb"
+  },
+  "img/feasts/mithra_feast.webp": {
+   "game_file": "assets/generated/illustrations/feasts/mithra_feast.jpg",
+   "source": "PharaohArt/religion/feast_mithra_feast_t1.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:28:26+00:00",
+   "source_sha256": "68fc989b68814174322aefa2d522717aadd9c3e40531697ef1042692697bc952"
+  },
+  "img/feasts/new_year.webp": {
+   "game_file": "assets/generated/illustrations/feasts/new_year.jpg",
+   "source": "PharaohArt/religion/feast_new_year_t1.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:28:14+00:00",
+   "source_sha256": "bf351c5e98931ee93734f87e84c58f713d32efdc778614ca84f64b82382bf006"
+  },
   "img/fronts/artemisium_day1.webp": {
    "game_file": "assets/generated/illustrations/fronts/artemisium_day1.jpg",
    "source": "PharaohArt/fronts/artemisium_day1_t1.png (off-repo Codex archive)",
@@ -1351,6 +1330,13 @@
    "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
    "date": "2026-11-02T21:03:49+00:00",
    "source_sha256": "d34b590ba3be30c325921e5abdb10b4311ecfb74a1d1ab47b35210d828d6f441"
+  },
+  "img/icons/buildings/governors_house.webp": {
+   "game_file": "assets/generated/icons/buildings/governors_house.png",
+   "source": "PharaohArt/governors_house/governors_house_icon_t1.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-04T20:26:42+00:00",
+   "source_sha256": "9613d10c04a51a0b48afd1ef8c747fbd0daa714fabfc87d2ccbabd5085be0937"
   },
   "img/icons/buildings/kings_eye.webp": {
    "game_file": "assets/generated/icons/buildings/kings_eye.png",
@@ -2549,6 +2535,13 @@
    "date": "2026-10-29T17:08:11+00:00",
    "source_sha256": "7a6afd92fb3d2a6113102d8e6f0b8fdb2784f336a1b4913a67f4fd1cf6d301a1"
   },
+  "img/portraits/units/field_physician.webp": {
+   "game_file": "assets/generated/portraits/units/field_physician.png",
+   "source": "off-repo Codex take; flat magenta background keyed out to alpha",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-04T22:20:00+00:00",
+   "source_sha256": "6ef3100cff0ea367c21987f274e7dfbfdab0071d9a0a0ea3b0347e0d320d85db"
+  },
   "img/portraits/units/foe_athenian_archer.webp": {
    "game_file": "assets/generated/portraits/units/foe_athenian_archer.png",
    "source": "PharaohArt/foe_portraits/foe_athenian_archer_t1.png (off-repo Codex archive)",
@@ -2828,6 +2821,62 @@
    "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
    "date": "2026-11-01T02:58:17+00:00",
    "source_sha256": "93b96339890640c17cab9da33550c63ed47b6891a6670dab7738f22490d02160"
+  },
+  "img/rites/apis_mourning.webp": {
+   "game_file": "assets/generated/illustrations/rites/apis_mourning.jpg",
+   "source": "PharaohArt/religion/rite_apis_mourning_t1.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:24:47+00:00",
+   "source_sha256": "f9ce2f716e973d05f115b5c8df088109c2d41c80cf30c3a427b3dde781a3af92"
+  },
+  "img/rites/delos_incense.webp": {
+   "game_file": "assets/generated/illustrations/rites/delos_incense.jpg",
+   "source": "PharaohArt/religion/rite_delos_incense_t1.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:26:13+00:00",
+   "source_sha256": "d1069e8fba83be04e49033e15323d3b7b305f1ceac3c0dba50f26e4edc0c6e45"
+  },
+  "img/rites/horse_for_cyrus.webp": {
+   "game_file": "assets/generated/illustrations/rites/horse_for_cyrus.jpg",
+   "source": "PharaohArt/religion/rite_horse_for_cyrus_t1.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:22:44+00:00",
+   "source_sha256": "f52c89b71e1ecc94a005e297c9e0b921ffb329995a50afddaede0b7b9692d814"
+  },
+  "img/rites/lan.webp": {
+   "game_file": "assets/generated/illustrations/rites/lan.jpg",
+   "source": "PharaohArt/religion/rite_lan_t1.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:22:26+00:00",
+   "source_sha256": "bc88b751ac201bb4bb995d0376407f2273eb7920959709907ac579cd604307f9"
+  },
+  "img/rites/marduk_offerings.webp": {
+   "game_file": "assets/generated/illustrations/rites/marduk_offerings.jpg",
+   "source": "PharaohArt/religion/rite_marduk_offerings_t1.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:24:01+00:00",
+   "source_sha256": "db876fa0661fde72e00c4e074f7c6cf59d6864c355b2ea03164b1956a74c2596"
+  },
+  "img/rites/offering.webp": {
+   "game_file": "assets/generated/illustrations/rites/offering.jpg",
+   "source": "PharaohArt/religion/rite_offering_t1.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:22:34+00:00",
+   "source_sha256": "0d26ed33369dd4b3180bb55734ed77de64a7856df745c37c53a18b7ce4c0c4b9"
+  },
+  "img/rites/royal_sacrifice.webp": {
+   "game_file": "assets/generated/illustrations/rites/royal_sacrifice.jpg",
+   "source": "PharaohArt/religion/rite_royal_sacrifice_t1.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:22:40+00:00",
+   "source_sha256": "ea14e16dd956c4f8f47c5edadfc260138f3a8ba995052f25a80ae53fc902ee57"
+  },
+  "img/rites/sip_feast.webp": {
+   "game_file": "assets/generated/illustrations/rites/sip_feast.jpg",
+   "source": "PharaohArt/religion/rite_sip_feast_t1.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:24:49+00:00",
+   "source_sha256": "f458c7c72b430d3ce5b7c05d1d9b7ff3671c1dc7243b8d12e822a70ff015f6a5"
   },
   "img/surfaces/reliefs/relief_lion_bull_combat.webp": {
    "game_file": "assets/generated/surfaces/reliefs/relief_lion_bull_combat.jpg",
@@ -4012,6 +4061,34 @@
    "date": "2026-11-04T16:21:15+00:00",
    "source_sha256": "20a430a92abfaf78a43186235c731182eebc1636a51ed8268ce9ab3b56ee680e"
   },
+  "img/topics/buildings/b_fishers_landing_s0.webp": {
+   "game_file": "assets/generated/illustrations/topics/buildings/b_fishers_landing_s0.jpg",
+   "source": "PharaohArt/topics/buildings/b_fishers_landing_s0_t1.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:52:45+00:00",
+   "source_sha256": "cbbd567fa0ccc2cb4a0ffc095e7d3b0119f291d38c71d5f0277a86d029fe86f0"
+  },
+  "img/topics/buildings/b_fishers_landing_s1.webp": {
+   "game_file": "assets/generated/illustrations/topics/buildings/b_fishers_landing_s1.jpg",
+   "source": "PharaohArt/topics/buildings/b_fishers_landing_s1_t1.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:51:37+00:00",
+   "source_sha256": "37ec9ca9147216f89467ffadbc672129c754c3584de786e3d399fa19b1dac002"
+  },
+  "img/topics/buildings/b_fishers_landing_s2.webp": {
+   "game_file": "assets/generated/illustrations/topics/buildings/b_fishers_landing_s2.jpg",
+   "source": "PharaohArt/topics/buildings/b_fishers_landing_s2_t1.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:53:37+00:00",
+   "source_sha256": "2b313e353453adb62fd54939aeab37b122508385cb6871d40cfcbdc80733a73d"
+  },
+  "img/topics/buildings/b_fishers_landing_s3.webp": {
+   "game_file": "assets/generated/illustrations/topics/buildings/b_fishers_landing_s3.jpg",
+   "source": "PharaohArt/topics/buildings/b_fishers_landing_s3_t1.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:53:07+00:00",
+   "source_sha256": "299f7cb70acd22c2e527a948ce79e3b2cfe52f1ade02171836d9817886839b46"
+  },
   "img/topics/buildings/b_flax_field_s0.webp": {
    "game_file": "assets/generated/illustrations/topics/buildings/b_flax_field_s0.jpg",
    "source": "PharaohArt/crowdpeople/topics/buildings/b_flax_field_s0_p_t1.png (off-repo Codex archive)",
@@ -4270,6 +4347,34 @@
    "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
    "date": "2026-11-02T19:44:50+00:00",
    "source_sha256": "0376da62c4e6c5d41d01993b0383afe5f7a3ff9dec0fdb662cd6ee73455b19cd"
+  },
+  "img/topics/buildings/b_governors_house_s0.webp": {
+   "game_file": "assets/generated/illustrations/topics/buildings/b_governors_house_s0.jpg",
+   "source": "PharaohArt/governors_house/b_governors_house_s0_t1.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-04T20:27:26+00:00",
+   "source_sha256": "5bd964490fb4b930588d3e7c86a4a9aeef38ae5e34fe7d1eed71c24e2f01fc65"
+  },
+  "img/topics/buildings/b_governors_house_s1.webp": {
+   "game_file": "assets/generated/illustrations/topics/buildings/b_governors_house_s1.jpg",
+   "source": "PharaohArt/governors_house/b_governors_house_s1_t1.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-04T20:27:40+00:00",
+   "source_sha256": "dabeb02368da782d6ce0e4202fdff20413a458904becb00c2589dd12eacc46b8"
+  },
+  "img/topics/buildings/b_governors_house_s2.webp": {
+   "game_file": "assets/generated/illustrations/topics/buildings/b_governors_house_s2.jpg",
+   "source": "PharaohArt/governors_house/b_governors_house_s2_t1.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-04T20:28:32+00:00",
+   "source_sha256": "f96b46d49c0e522df7ce7fed8ffe63b26bc9fea5446c4fe6d8323f70c21b0410"
+  },
+  "img/topics/buildings/b_governors_house_s3.webp": {
+   "game_file": "assets/generated/illustrations/topics/buildings/b_governors_house_s3.jpg",
+   "source": "PharaohArt/governors_house/b_governors_house_s3_t1.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-04T20:27:38+00:00",
+   "source_sha256": "399f608c08622cde44f099c9a61e390e57f204fcc689756a39490ae75811475f"
   },
   "img/topics/buildings/b_granary_s0.webp": {
    "game_file": "assets/generated/illustrations/topics/buildings/b_granary_s0.jpg",
@@ -4711,6 +4816,48 @@
    "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
    "date": "2026-11-02T18:24:31+00:00",
    "source_sha256": "c22f32d89306e2882797cf0b7d87980c65b2bd01bc65064dcb0b27182edba0e3"
+  },
+  "img/topics/buildings/b_local_shrine_s0.webp": {
+   "game_file": "assets/generated/illustrations/topics/buildings/b_local_shrine_s0.jpg",
+   "source": "PharaohArt/religion/rite_sip_feast_t1.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:24:49+00:00",
+   "source_sha256": "f458c7c72b430d3ce5b7c05d1d9b7ff3671c1dc7243b8d12e822a70ff015f6a5"
+  },
+  "img/topics/buildings/b_local_shrine_s1.webp": {
+   "game_file": "assets/generated/illustrations/topics/buildings/b_local_shrine_s1.jpg",
+   "source": "PharaohArt/religion/rite_marduk_offerings_t2.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:24:49+00:00",
+   "source_sha256": "e62762af79c5256ad2baf69f2d77179084fc54086002faadfaed6f62909e0d9a"
+  },
+  "img/topics/buildings/b_local_shrine_s2.webp": {
+   "game_file": "assets/generated/illustrations/topics/buildings/b_local_shrine_s2.jpg",
+   "source": "PharaohArt/religion/rite_mandrocles_gift_t1.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:24:47+00:00",
+   "source_sha256": "95343445f43c77dfb9811107120e242fbf4b1e2d5ae047256b7e4a9411b3c6aa"
+  },
+  "img/topics/buildings/b_magi_altar_s0.webp": {
+   "game_file": "assets/generated/illustrations/topics/buildings/b_magi_altar_s0.jpg",
+   "source": "PharaohArt/religion/magi_altar_t2.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:31:07+00:00",
+   "source_sha256": "41ee119cc3bc99b169c24c120261588e1f32ccd24d2a1a39131f80de9ba39337"
+  },
+  "img/topics/buildings/b_magi_altar_s1.webp": {
+   "game_file": "assets/generated/illustrations/topics/buildings/b_magi_altar_s1.jpg",
+   "source": "PharaohArt/religion/rite_kindling_t2.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:22:44+00:00",
+   "source_sha256": "67e3bcbb41b5139c1c80c1efb83ccc1b16c3de747d89e4cf285f92da446635dd"
+  },
+  "img/topics/buildings/b_magi_altar_s2.webp": {
+   "game_file": "assets/generated/illustrations/topics/buildings/b_magi_altar_s2.jpg",
+   "source": "PharaohArt/religion/magi_altar_t1.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:31:47+00:00",
+   "source_sha256": "fcfcd64caa49b2bc318e4b7f3ff7f10c7c770f83aaa8c2151c937024c214daf0"
   },
   "img/topics/buildings/b_magi_lodge_s0.webp": {
    "game_file": "assets/generated/illustrations/topics/buildings/b_magi_lodge_s0.jpg",
@@ -5797,6 +5944,48 @@
    "date": "2026-11-02T21:34:51+00:00",
    "source_sha256": "d924c966293e5d8be49f2885c4ed1506a7bc59db4f230b10729731604d7f4340"
   },
+  "img/topics/buildings/b_scribal_school_s0.webp": {
+   "game_file": "assets/generated/illustrations/topics/buildings/b_scribal_school_s0.jpg",
+   "source": "PharaohArt/crowdpeople/topics/buildings/b_scribal_school_s0_p_t1.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T04:26:15+00:00",
+   "source_sha256": "49f660d2bb5895e10dbfe26f00f7f933ca53cf32a3afeec807b69e788756c134"
+  },
+  "img/topics/buildings/b_scribal_school_s1.webp": {
+   "game_file": "assets/generated/illustrations/topics/buildings/b_scribal_school_s1.jpg",
+   "source": "PharaohArt/topics/buildings/b_scribal_school_s1_t2.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:54:24+00:00",
+   "source_sha256": "3c105f1f9822cd3d3ba68a29cdb2af14f5a7682a576a780624a4bd43704b5508"
+  },
+  "img/topics/buildings/b_scribal_school_s2.webp": {
+   "game_file": "assets/generated/illustrations/topics/buildings/b_scribal_school_s2.jpg",
+   "source": "PharaohArt/topics/buildings/b_scribal_school_s2_t2.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:54:54+00:00",
+   "source_sha256": "472a1dd26b341e1410064f0a4777efae435a6cb5784c0749858066ccc69d73f7"
+  },
+  "img/topics/buildings/b_scribal_school_s3.webp": {
+   "game_file": "assets/generated/illustrations/topics/buildings/b_scribal_school_s3.jpg",
+   "source": "PharaohArt/topics/buildings/b_scribal_school_s3_t1.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:56:00+00:00",
+   "source_sha256": "a5936a60226119b289761fe6a099d0bf91485e650419fd9c6f41796145bd1d8e"
+  },
+  "img/topics/buildings/b_scribal_school_s4.webp": {
+   "game_file": "assets/generated/illustrations/topics/buildings/b_scribal_school_s4.jpg",
+   "source": "PharaohArt/topics/buildings/b_scribal_school_s4_t2.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:56:08+00:00",
+   "source_sha256": "b0d497e6d8ffd81f2c2d0e18e050d1517ed8fe92e0d771d0786fd4c586771322"
+  },
+  "img/topics/buildings/b_scribal_school_s5.webp": {
+   "game_file": "assets/generated/illustrations/topics/buildings/b_scribal_school_s5.jpg",
+   "source": "PharaohArt/topics/buildings/b_scribal_school_s5_t2.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:56:12+00:00",
+   "source_sha256": "a8c69b6e12bdb766626124ae2fa01a21b5ae4c30f3005284e39654721a7a7fa6"
+  },
   "img/topics/buildings/b_scribe_s0.webp": {
    "game_file": "assets/generated/illustrations/topics/buildings/b_scribe_s0.jpg",
    "source": "PharaohArt/crowdpeople/topics/buildings/b_scribe_s0_p_t1.png (off-repo Codex archive)",
@@ -6286,6 +6475,48 @@
    "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
    "date": "2026-11-02T18:58:04+00:00",
    "source_sha256": "fb6f9423495434be056704e54e912996a884e0f3a3a0a63d6d89a0e31efd7663"
+  },
+  "img/topics/buildings/b_training_ground_s0.webp": {
+   "game_file": "assets/generated/illustrations/topics/buildings/b_training_ground_s0.jpg",
+   "source": "PharaohArt/topics/buildings/b_training_ground_s0_t2.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:58:01+00:00",
+   "source_sha256": "0ec4d06f94b3041c978591728231d720bd3a2ae0ce37a3f1db37f54dafb6c37d"
+  },
+  "img/topics/buildings/b_training_ground_s1.webp": {
+   "game_file": "assets/generated/illustrations/topics/buildings/b_training_ground_s1.jpg",
+   "source": "PharaohArt/topics/buildings/b_training_ground_s1_t2.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:58:23+00:00",
+   "source_sha256": "302ce61df9742b386b361117cb79d677b84c5434c7c07eb02640188f66f6ca50"
+  },
+  "img/topics/buildings/b_training_ground_s2.webp": {
+   "game_file": "assets/generated/illustrations/topics/buildings/b_training_ground_s2.jpg",
+   "source": "PharaohArt/topics/buildings/b_training_ground_s2_t2.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:58:43+00:00",
+   "source_sha256": "6cba330812f29b2fc4fe0d36c36752ff717ec64f87156f96af57159216f30748"
+  },
+  "img/topics/buildings/b_training_ground_s3.webp": {
+   "game_file": "assets/generated/illustrations/topics/buildings/b_training_ground_s3.jpg",
+   "source": "PharaohArt/topics/buildings/b_training_ground_s3_t1.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:58:43+00:00",
+   "source_sha256": "80b274f5e57858045d9b60df59609668785c7ca1759bd9b7394c447cc655ea4b"
+  },
+  "img/topics/buildings/b_training_ground_s4.webp": {
+   "game_file": "assets/generated/illustrations/topics/buildings/b_training_ground_s4.jpg",
+   "source": "PharaohArt/crowdpeople/topics/buildings/b_training_ground_s4_p_t2.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T04:27:40+00:00",
+   "source_sha256": "c013806fd6d93a05be42c7730f66b6c6cf59a40f5a1f1d635323f7775872bbfb"
+  },
+  "img/topics/buildings/b_training_ground_s5.webp": {
+   "game_file": "assets/generated/illustrations/topics/buildings/b_training_ground_s5.jpg",
+   "source": "PharaohArt/topics/buildings/b_training_ground_s5_t2.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T04:00:30+00:00",
+   "source_sha256": "62246e32045cf990009a1a9dff496980a0b377ef565d899be532ab6f262e36d7"
   },
   "img/topics/buildings/b_vineyard_s0.webp": {
    "game_file": "assets/generated/illustrations/topics/buildings/b_vineyard_s0.jpg",
@@ -8890,6 +9121,335 @@
    "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
    "date": "2026-11-04T02:20:39+00:00",
    "source_sha256": "a079fdfd94372d50e83f99ea6438902e1f6b3564e47a5672f9bc997741fa62d3"
+  },
+  "img/topics/faiths/f_death_s0.webp": {
+   "game_file": "assets/generated/illustrations/topics/faiths/f_death_s0.jpg",
+   "source": "PharaohArt/religion/rite_apis_mourning_t1.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:24:47+00:00",
+   "source_sha256": "f9ce2f716e973d05f115b5c8df088109c2d41c80cf30c3a427b3dde781a3af92"
+  },
+  "img/topics/faiths/f_death_s1.webp": {
+   "game_file": "assets/generated/illustrations/topics/faiths/f_death_s1.jpg",
+   "source": "PharaohArt/religion/rite_horse_for_cyrus_t1.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:22:44+00:00",
+   "source_sha256": "f52c89b71e1ecc94a005e297c9e0b921ffb329995a50afddaede0b7b9692d814"
+  },
+  "img/topics/faiths/f_death_s2.webp": {
+   "game_file": "assets/generated/illustrations/topics/faiths/f_death_s2.jpg",
+   "source": "PharaohArt/religion/rite_restore_ayadana_t1.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:24:07+00:00",
+   "source_sha256": "b66149cb0ab5e9eabcba88a2ef70004bb1b2f069a40eb9870095767186d1bdc4"
+  },
+  "img/topics/faiths/f_egypt_s0.webp": {
+   "game_file": "assets/generated/illustrations/topics/faiths/f_egypt_s0.jpg",
+   "source": "PharaohArt/religion/rite_offering_t1.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:22:34+00:00",
+   "source_sha256": "0d26ed33369dd4b3180bb55734ed77de64a7856df745c37c53a18b7ce4c0c4b9"
+  },
+  "img/topics/faiths/f_egypt_s1.webp": {
+   "game_file": "assets/generated/illustrations/topics/faiths/f_egypt_s1.jpg",
+   "source": "PharaohArt/religion/rite_apis_mourning_t2.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:25:01+00:00",
+   "source_sha256": "2d9ecfdf6a681aca76fba1ec43c4db64cb9c59fabb97edb3688cd79a5972ced2"
+  },
+  "img/topics/faiths/f_egypt_s2.webp": {
+   "game_file": "assets/generated/illustrations/topics/faiths/f_egypt_s2.jpg",
+   "source": "PharaohArt/religion/feast_apis_feast_t2.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:29:40+00:00",
+   "source_sha256": "4c414c104707e9af5e042f5063da0e17103d0dc6572b9f5a0b55ca648688e273"
+  },
+  "img/topics/faiths/f_egypt_s3.webp": {
+   "game_file": "assets/generated/illustrations/topics/faiths/f_egypt_s3.jpg",
+   "source": "PharaohArt/religion/feast_sokar_t2.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:28:36+00:00",
+   "source_sha256": "21b360b161795fe67bddd7eda0de2b7a3e36b18b9de89376dfbcfae2fc00fba0"
+  },
+  "img/topics/faiths/f_elam_gods_s0.webp": {
+   "game_file": "assets/generated/illustrations/topics/faiths/f_elam_gods_s0.jpg",
+   "source": "PharaohArt/religion/rite_sip_feast_t2.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:24:51+00:00",
+   "source_sha256": "4add56c8835f725a4376b4f21b29381a551ecc9350e3b86a56bd7bf1013d490c"
+  },
+  "img/topics/faiths/f_elam_gods_s1.webp": {
+   "game_file": "assets/generated/illustrations/topics/faiths/f_elam_gods_s1.jpg",
+   "source": "PharaohArt/religion/rite_sip_feast_t1.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:24:49+00:00",
+   "source_sha256": "f458c7c72b430d3ce5b7c05d1d9b7ff3671c1dc7243b8d12e822a70ff015f6a5"
+  },
+  "img/topics/faiths/f_elam_gods_s2.webp": {
+   "game_file": "assets/generated/illustrations/topics/faiths/f_elam_gods_s2.jpg",
+   "source": "PharaohArt/religion/feast_elam_sip_t2.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:29:42+00:00",
+   "source_sha256": "d29a74c6f3e90844b2144d7b5950ba6645cdc3dd20e3e7fb0f6c47845b5a0316"
+  },
+  "img/topics/faiths/f_fire_s0.webp": {
+   "game_file": "assets/generated/illustrations/topics/faiths/f_fire_s0.jpg",
+   "source": "PharaohArt/religion/magi_altar_t2.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:31:07+00:00",
+   "source_sha256": "41ee119cc3bc99b169c24c120261588e1f32ccd24d2a1a39131f80de9ba39337"
+  },
+  "img/topics/faiths/f_fire_s1.webp": {
+   "game_file": "assets/generated/illustrations/topics/faiths/f_fire_s1.jpg",
+   "source": "PharaohArt/religion/rite_kindling_t1.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:22:42+00:00",
+   "source_sha256": "021e7e2b30f1670c4584b00756cb1793740316b8d8211f24b8ea2f444a1c4725"
+  },
+  "img/topics/faiths/f_fire_s2.webp": {
+   "game_file": "assets/generated/illustrations/topics/faiths/f_fire_s2.jpg",
+   "source": "PharaohArt/religion/magi_altar_t1.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:31:47+00:00",
+   "source_sha256": "fcfcd64caa49b2bc318e4b7f3ff7f10c7c770f83aaa8c2151c937024c214daf0"
+  },
+  "img/topics/faiths/f_fire_s3.webp": {
+   "game_file": "assets/generated/illustrations/topics/faiths/f_fire_s3.jpg",
+   "source": "PharaohArt/religion/local_shrine_t2.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:31:31+00:00",
+   "source_sha256": "9cbf8483ae0637ba55e12df0b3c413949e0a5e33eec271a72e68b05a0e21cdc0"
+  },
+  "img/topics/faiths/f_greek_cults_s0.webp": {
+   "game_file": "assets/generated/illustrations/topics/faiths/f_greek_cults_s0.jpg",
+   "source": "PharaohArt/religion/feast_cybebe_feast_t2.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:29:54+00:00",
+   "source_sha256": "04abf0c27d238fbaea1b9504b8eeacdf2f76717cf59d0c147cba7617e986cf63"
+  },
+  "img/topics/faiths/f_greek_cults_s1.webp": {
+   "game_file": "assets/generated/illustrations/topics/faiths/f_greek_cults_s1.jpg",
+   "source": "PharaohArt/religion/rite_delos_incense_t2.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:26:20+00:00",
+   "source_sha256": "519d6840a3f5921af8a1d9656a870b82e93a165a51dbdeec3ce0e6f3bf07e90b"
+  },
+  "img/topics/faiths/f_greek_cults_s2.webp": {
+   "game_file": "assets/generated/illustrations/topics/faiths/f_greek_cults_s2.jpg",
+   "source": "PharaohArt/religion/rite_mandrocles_gift_t2.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:24:49+00:00",
+   "source_sha256": "dfe6a18c77718de3bd790774bc7dbfcd393fdbb8ed0d958d72c35b21b7827420"
+  },
+  "img/topics/faiths/f_greek_cults_s3.webp": {
+   "game_file": "assets/generated/illustrations/topics/faiths/f_greek_cults_s3.jpg",
+   "source": "PharaohArt/religion/feast_panionia_t2.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:31:05+00:00",
+   "source_sha256": "4fe80b76c4e2ac2d703b450701a2d5c4687927c1c2f975c1b3bce3839b4a5633"
+  },
+  "img/topics/faiths/f_jerusalem_s0.webp": {
+   "game_file": "assets/generated/illustrations/topics/faiths/f_jerusalem_s0.jpg",
+   "source": "PharaohArt/religion/rite_offering_t2.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:22:40+00:00",
+   "source_sha256": "b82d43841bdb9ee7343dba6bd1ccf1c3f56347eed47d5599a4460a0f09293b7b"
+  },
+  "img/topics/faiths/f_jerusalem_s1.webp": {
+   "game_file": "assets/generated/illustrations/topics/faiths/f_jerusalem_s1.jpg",
+   "source": "PharaohArt/religion/rite_marduk_offerings_t1.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:24:01+00:00",
+   "source_sha256": "db876fa0661fde72e00c4e074f7c6cf59d6864c355b2ea03164b1956a74c2596"
+  },
+  "img/topics/faiths/f_jerusalem_s2.webp": {
+   "game_file": "assets/generated/illustrations/topics/faiths/f_jerusalem_s2.jpg",
+   "source": "PharaohArt/religion/rite_offering_t1.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:22:34+00:00",
+   "source_sha256": "0d26ed33369dd4b3180bb55734ed77de64a7856df745c37c53a18b7ce4c0c4b9"
+  },
+  "img/topics/faiths/f_kings_gods_s0.webp": {
+   "game_file": "assets/generated/illustrations/topics/faiths/f_kings_gods_s0.jpg",
+   "source": "PharaohArt/religion/rite_kindling_t2.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:22:44+00:00",
+   "source_sha256": "67e3bcbb41b5139c1c80c1efb83ccc1b16c3de747d89e4cf285f92da446635dd"
+  },
+  "img/topics/faiths/f_kings_gods_s1.webp": {
+   "game_file": "assets/generated/illustrations/topics/faiths/f_kings_gods_s1.jpg",
+   "source": "PharaohArt/religion/rite_lan_t2.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:22:40+00:00",
+   "source_sha256": "65113528751ca0b57ed4c51df995acc9041af005aafd43b6dbc9658e11a44963"
+  },
+  "img/topics/faiths/f_kings_gods_s2.webp": {
+   "game_file": "assets/generated/illustrations/topics/faiths/f_kings_gods_s2.jpg",
+   "source": "PharaohArt/religion/rite_restore_ayadana_t2.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:24:47+00:00",
+   "source_sha256": "899e0df78481612bd4ac30623a096c513be139ff8747913c0b29826b74983179"
+  },
+  "img/topics/faiths/f_kings_gods_s3.webp": {
+   "game_file": "assets/generated/illustrations/topics/faiths/f_kings_gods_s3.jpg",
+   "source": "PharaohArt/religion/feast_elam_sip_t2.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:29:42+00:00",
+   "source_sha256": "d29a74c6f3e90844b2144d7b5950ba6645cdc3dd20e3e7fb0f6c47845b5a0316"
+  },
+  "img/topics/faiths/f_lan_s0.webp": {
+   "game_file": "assets/generated/illustrations/topics/faiths/f_lan_s0.jpg",
+   "source": "PharaohArt/religion/rite_lan_t2.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:22:40+00:00",
+   "source_sha256": "65113528751ca0b57ed4c51df995acc9041af005aafd43b6dbc9658e11a44963"
+  },
+  "img/topics/faiths/f_lan_s1.webp": {
+   "game_file": "assets/generated/illustrations/topics/faiths/f_lan_s1.jpg",
+   "source": "PharaohArt/religion/rite_offering_t2.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:22:40+00:00",
+   "source_sha256": "b82d43841bdb9ee7343dba6bd1ccf1c3f56347eed47d5599a4460a0f09293b7b"
+  },
+  "img/topics/faiths/f_lan_s2.webp": {
+   "game_file": "assets/generated/illustrations/topics/faiths/f_lan_s2.jpg",
+   "source": "PharaohArt/religion/feast_elam_sip_t1.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:30:25+00:00",
+   "source_sha256": "d38efa97b8606971b677734eae1af15f480ec6235836b4decbbe53b13854cf71"
+  },
+  "img/topics/faiths/f_later_feasts_s0.webp": {
+   "game_file": "assets/generated/illustrations/topics/faiths/f_later_feasts_s0.jpg",
+   "source": "PharaohArt/religion/feast_midwinter_fires_t2.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:28:30+00:00",
+   "source_sha256": "b9856d7ecca979f26907accaaf8a0994366d743d62400d4fd5b6cefba5b30bcd"
+  },
+  "img/topics/faiths/f_later_feasts_s1.webp": {
+   "game_file": "assets/generated/illustrations/topics/faiths/f_later_feasts_s1.jpg",
+   "source": "PharaohArt/religion/feast_tir_feast_t2.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:28:14+00:00",
+   "source_sha256": "d7ae5caaebeca099511ef999593ce260b51c1e09e3b1be11f05af756bc2bce69"
+  },
+  "img/topics/faiths/f_later_feasts_s2.webp": {
+   "game_file": "assets/generated/illustrations/topics/faiths/f_later_feasts_s2.jpg",
+   "source": "PharaohArt/religion/feast_midwinter_fires_t1.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:28:30+00:00",
+   "source_sha256": "b51f2625a757d2264be812961b9744ce2446c678a54ce3e980dd1efece24daeb"
+  },
+  "img/topics/faiths/f_magi_s0.webp": {
+   "game_file": "assets/generated/illustrations/topics/faiths/f_magi_s0.jpg",
+   "source": "PharaohArt/religion/rite_strymon_horses_t2.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:26:03+00:00",
+   "source_sha256": "c5cf0b0c438ec05d93bf1ff0b9ef88178ed11eb522062625ff97ed4fe86170b2"
+  },
+  "img/topics/faiths/f_magi_s1.webp": {
+   "game_file": "assets/generated/illustrations/topics/faiths/f_magi_s1.jpg",
+   "source": "PharaohArt/religion/rite_lan_t1.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:22:26+00:00",
+   "source_sha256": "bc88b751ac201bb4bb995d0376407f2273eb7920959709907ac579cd604307f9"
+  },
+  "img/topics/faiths/f_magi_s2.webp": {
+   "game_file": "assets/generated/illustrations/topics/faiths/f_magi_s2.jpg",
+   "source": "PharaohArt/religion/rite_storm_sacrifice_t2.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:26:55+00:00",
+   "source_sha256": "fd0e3d9ae4a3dcffd2440f0c35f76bbcf98da09a191558e9dc1948bf622848f6"
+  },
+  "img/topics/faiths/f_magi_s3.webp": {
+   "game_file": "assets/generated/illustrations/topics/faiths/f_magi_s3.jpg",
+   "source": "PharaohArt/religion/rite_horse_for_cyrus_t2.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:21:48+00:00",
+   "source_sha256": "7f7be475c7342e44560bec36700414a62414d4fe10f73366f0770e545855400e"
+  },
+  "img/topics/faiths/f_marduk_s0.webp": {
+   "game_file": "assets/generated/illustrations/topics/faiths/f_marduk_s0.jpg",
+   "source": "PharaohArt/religion/rite_marduk_offerings_t2.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:24:49+00:00",
+   "source_sha256": "e62762af79c5256ad2baf69f2d77179084fc54086002faadfaed6f62909e0d9a"
+  },
+  "img/topics/faiths/f_marduk_s1.webp": {
+   "game_file": "assets/generated/illustrations/topics/faiths/f_marduk_s1.jpg",
+   "source": "PharaohArt/religion/feast_akitu_t2.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:30:33+00:00",
+   "source_sha256": "bb3cf06bd855f6225bb60ae42822742e24fb5bc69f4507876eb6369df45349eb"
+  },
+  "img/topics/faiths/f_marduk_s2.webp": {
+   "game_file": "assets/generated/illustrations/topics/faiths/f_marduk_s2.jpg",
+   "source": "PharaohArt/religion/feast_akitu_t1.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:30:17+00:00",
+   "source_sha256": "c2027514ea388bf4871c01fb2ad3e605a9789dd503f0b14b3af984f2ccddb0ac"
+  },
+  "img/topics/faiths/f_mithra_s0.webp": {
+   "game_file": "assets/generated/illustrations/topics/faiths/f_mithra_s0.jpg",
+   "source": "PharaohArt/religion/feast_mithra_feast_t2.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:28:58+00:00",
+   "source_sha256": "53446666f31ab8b02e24077aa11023b397768c35585aa875f69e57906ee98168"
+  },
+  "img/topics/faiths/f_mithra_s1.webp": {
+   "game_file": "assets/generated/illustrations/topics/faiths/f_mithra_s1.jpg",
+   "source": "PharaohArt/religion/feast_mithra_feast_t1.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:28:26+00:00",
+   "source_sha256": "68fc989b68814174322aefa2d522717aadd9c3e40531697ef1042692697bc952"
+  },
+  "img/topics/faiths/f_mithra_s2.webp": {
+   "game_file": "assets/generated/illustrations/topics/faiths/f_mithra_s2.jpg",
+   "source": "PharaohArt/religion/feast_panionia_t1.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:30:21+00:00",
+   "source_sha256": "f71e8464f5516b8156973271da3c754ecf259067b2426919a675ebcce60c97be"
+  },
+  "img/topics/faiths/f_new_year_s0.webp": {
+   "game_file": "assets/generated/illustrations/topics/faiths/f_new_year_s0.jpg",
+   "source": "PharaohArt/religion/feast_new_year_t2.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:27:05+00:00",
+   "source_sha256": "5db9d6cf8471fbe8b21e236d636a1825f09f9b81f9359f3518afc1e9ff3a58d1"
+  },
+  "img/topics/faiths/f_new_year_s1.webp": {
+   "game_file": "assets/generated/illustrations/topics/faiths/f_new_year_s1.jpg",
+   "source": "PharaohArt/religion/feast_new_year_t1.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:28:14+00:00",
+   "source_sha256": "bf351c5e98931ee93734f87e84c58f713d32efdc778614ca84f64b82382bf006"
+  },
+  "img/topics/faiths/f_new_year_s2.webp": {
+   "game_file": "assets/generated/illustrations/topics/faiths/f_new_year_s2.jpg",
+   "source": "PharaohArt/religion/feast_akitu_t2.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:30:33+00:00",
+   "source_sha256": "bb3cf06bd855f6225bb60ae42822742e24fb5bc69f4507876eb6369df45349eb"
+  },
+  "img/topics/faiths/f_sacrifice_s0.webp": {
+   "game_file": "assets/generated/illustrations/topics/faiths/f_sacrifice_s0.jpg",
+   "source": "PharaohArt/religion/rite_royal_sacrifice_t2.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:22:40+00:00",
+   "source_sha256": "2b91abdacd21cfe1ec3306a40188cd6ee620ba4c445b5dad6f7fb3eebbdfd06f"
+  },
+  "img/topics/faiths/f_sacrifice_s1.webp": {
+   "game_file": "assets/generated/illustrations/topics/faiths/f_sacrifice_s1.jpg",
+   "source": "PharaohArt/religion/rite_strymon_horses_t1.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:26:59+00:00",
+   "source_sha256": "0852ffea5caade26adacd8fda6abfb437cb008f952c56daefafef4a09657cd62"
+  },
+  "img/topics/faiths/f_sacrifice_s2.webp": {
+   "game_file": "assets/generated/illustrations/topics/faiths/f_sacrifice_s2.jpg",
+   "source": "PharaohArt/religion/rite_hegesistratus_t2.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-06T03:26:49+00:00",
+   "source_sha256": "042c738db0d65c3875d8430ed504fb2590a9b1dbf0b55b8184197c985aa52d6e"
   },
   "img/topics/nature/w_aurochs_s0.webp": {
    "game_file": "assets/generated/illustrations/topics/nature/w_aurochs_s0.jpg",
@@ -19713,6 +20273,34 @@
    "date": "2026-11-04T02:30:26+00:00",
    "source_sha256": "0fd27414b1d8406f1c7412822fe5360b39183abd77517201b8e9fb7d389ace64"
   },
+  "img/topics/units/u_field_physician_s0.webp": {
+   "game_file": "assets/generated/illustrations/topics/units/u_field_physician_s0.jpg",
+   "source": "PharaohArt/physicians_2026-11-04/u_field_physician_s0.jpg.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-04T23:46:22+00:00",
+   "source_sha256": "8a70e25b351845021f593e99f917da66b4438794aa205c1f796279ebe0f8b45b"
+  },
+  "img/topics/units/u_field_physician_s1.webp": {
+   "game_file": "assets/generated/illustrations/topics/units/u_field_physician_s1.jpg",
+   "source": "PharaohArt/physicians_2026-11-04/u_field_physician_s1.jpg.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-04T23:46:22+00:00",
+   "source_sha256": "e04dfa9c2dd880663bd66b23e0932a8ac6ae17b1ed290788abe567bab0a86a99"
+  },
+  "img/topics/units/u_field_physician_s2.webp": {
+   "game_file": "assets/generated/illustrations/topics/units/u_field_physician_s2.jpg",
+   "source": "PharaohArt/physicians_2026-11-04/u_field_physician_s2.jpg.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-04T23:47:06+00:00",
+   "source_sha256": "3f33073156ac8a804ad10babb5b14d4592b308d8af233deaa510dc13f8e2438b"
+  },
+  "img/topics/units/u_field_physician_s3.webp": {
+   "game_file": "assets/generated/illustrations/topics/units/u_field_physician_s3.jpg",
+   "source": "PharaohArt/physicians_2026-11-04/u_field_physician_s3.jpg.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-04T23:47:06+00:00",
+   "source_sha256": "699158c7cad6fb0a9b9a42aeddd5e5b8d675dfe7e91c33a9ac5443a418833d5b"
+  },
   "img/topics/units/u_greek_archer_s0.webp": {
    "game_file": "assets/generated/illustrations/topics/units/u_greek_archer_s0.jpg",
    "source": "PharaohArt/crowdpeople/topics/units/u_greek_archer_s0_p_t1.png (off-repo Codex archive)",
@@ -20650,6 +21238,27 @@
    "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
    "date": "2026-11-04T02:35:14+00:00",
    "source_sha256": "08a7a5ed5d0cf7b8d015c54da743b0c0c8f1ce397023f440657e7171aa50b8ed"
+  },
+  "img/topics/units/u_royal_physician_s0.webp": {
+   "game_file": "assets/generated/illustrations/topics/units/u_royal_physician_s0.jpg",
+   "source": "PharaohArt/physicians_2026-11-04/u_royal_physician_s0.jpg.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-04T23:48:03+00:00",
+   "source_sha256": "b3caecb05a9a4fbe9c8e88d0867da27071c853485bad878258098366036192a1"
+  },
+  "img/topics/units/u_royal_physician_s1.webp": {
+   "game_file": "assets/generated/illustrations/topics/units/u_royal_physician_s1.jpg",
+   "source": "PharaohArt/physicians_2026-11-04/u_royal_physician_s1.jpg.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-04T23:47:12+00:00",
+   "source_sha256": "44a1a126e870e41247af0b5a0f7b886c9de3c9a301a3cc0fe4283b3764d4ef34"
+  },
+  "img/topics/units/u_royal_physician_s2.webp": {
+   "game_file": "assets/generated/illustrations/topics/units/u_royal_physician_s2.jpg",
+   "source": "PharaohArt/physicians_2026-11-04/u_royal_physician_s2.jpg.png (off-repo Codex archive)",
+   "generator": "OpenAI built-in image_gen via Codex CLI (codex exec, imagegen skill)",
+   "date": "2026-11-04T23:48:01+00:00",
+   "source_sha256": "208541391c2b6b485be9565152e5f0c78e4041f6a18d7a8762e9d3b09f54f056"
   },
   "img/topics/units/u_royal_spearman_s0.webp": {
    "game_file": "assets/generated/illustrations/topics/units/u_royal_spearman_s0.jpg",
